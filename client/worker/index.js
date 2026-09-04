@@ -1,9 +1,17 @@
-// This file runs as a serverless function on Cloudflare itself.
-// No VPS, no separate server - it deploys automatically alongside your static site.
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
 
-export async function onRequestPost(context) {
-  const { request, env } = context;
+    if (url.pathname === "/api/quote" && request.method === "POST") {
+      return handleQuote(request, env);
+    }
 
+    // Everything else - serve the built React static assets
+    return env.ASSETS.fetch(request);
+  },
+};
+
+async function handleQuote(request, env) {
   let body;
   try {
     body = await request.json();
