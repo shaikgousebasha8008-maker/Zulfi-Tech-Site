@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="top">
       <div className="hero-glow"></div>
       <div className="hero-gridbg"></div>
       <div className="wrap">
@@ -20,6 +20,12 @@ export default function Hero() {
         <div className="hero-ctas">
           <a href="#services" className="btn-primary">View services</a>
           <a href="#contact" className="btn-secondary">Talk to us</a>
+        </div>
+        <div className="hero-badges">
+          <span>Google Cloud</span>
+          <span>AWS</span>
+          <span>SPF · DKIM · DMARC</span>
+          <span>Bare Metal</span>
         </div>
         <div className="hero-stats">
           <div className="hero-stat"><div className="num">5</div><div className="lbl">infrastructure domains</div></div>
