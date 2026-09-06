@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
+import Logo from "../components/Logo.jsx";
 
 export default function Terms() {
   return (
     <div>
       <header className="site-header">
         <nav>
-          <Link to="/" className="brand">Zulfi<span className="accent">Tech</span></Link>
+          <Link to="/" className="brand">
+            <Logo variant="onDark" className="brand-mark" />
+            Zulfi<span className="accent">Tech</span>
+          </Link>
         </nav>
       </header>
       <div className="legal-page">

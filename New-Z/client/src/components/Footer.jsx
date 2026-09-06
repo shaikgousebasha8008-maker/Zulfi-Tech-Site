@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import Logo from "./Logo.jsx";
 
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="wrap footer-grid">
         <div className="footer-brand">
-          <div className="brand">Zulfi<span className="accent">Tech</span></div>
+          <Logo variant="onDark" showText className="footer-badge" />
           <p>Cloud, bare metal, and email infrastructure — built and managed by one team, start to finish.</p>
         </div>
         <div className="footer-col">

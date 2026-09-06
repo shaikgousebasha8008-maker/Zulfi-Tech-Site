@@ -1,0 +1,23 @@
+<svg width="320" height="420" viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg">
+  <!-- Two-tone ring: top half graphite, bottom half bronze -->
+  <path d="M 65 150 A 95 95 0 0 0 255 150" fill="none" stroke="#20242B" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 255 150 A 95 95 0 0 0 65 150" fill="none" stroke="#C17F3A" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Interlocked ZT monogram, centered in the ring -->
+  <g transform="translate(99, 104)">
+    <!-- shared top bar: Z top stroke + T crossbar -->
+    <line x1="17" y1="0" x2="112" y2="0" stroke="#20242B" stroke-width="12" stroke-linecap="round"/>
+    <!-- Z diagonal -->
+    <line x1="102" y1="4" x2="20" y2="88" stroke="#20242B" stroke-width="12" stroke-linecap="round"/>
+    <!-- Z bottom bar -->
+    <line x1="10" y1="92" x2="112" y2="92" stroke="#20242B" stroke-width="12" stroke-linecap="round"/>
+    <!-- T vertical stem -->
+    <line x1="61" y1="0" x2="61" y2="92" stroke="#C17F3A" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <!-- Company name -->
+  <text x="160" y="305" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="600" letter-spacing="4" fill="#20242B" text-anchor="middle">ZULFITECH</text>
+
+  <!-- Slogan -->
+  <text x="160" y="332" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="2" fill="#7A7F87" text-anchor="middle">&#8212; INFRASTRUCTURE THAT DELIVERS. &#8212;</text>
+</svg>

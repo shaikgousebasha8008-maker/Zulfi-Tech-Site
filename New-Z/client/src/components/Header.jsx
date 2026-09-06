@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Logo from "./Logo.jsx";
 
 const links = [
   { href: "#services", label: "Services" },
@@ -15,6 +16,7 @@ export default function Header() {
     <header className="site-header">
       <nav>
         <a href="#top" className="brand">
+          <Logo variant="onDark" className="brand-mark" />
           Zulfi<span className="accent">Tech</span>
         </a>
         <div className="nav-links">

@@ -62,8 +62,7 @@ export default function Contact() {
         </form>
 
         <div className="contact-alt">
-          {/* Replace WHATSAPP_NUMBER_HERE with your number, country code first, no + or spaces (e.g. 919876543210) */}
-          <a href="https://wa.me/WHATSAPP_NUMBER_HERE" target="_blank" rel="noreferrer" className="alt-link whatsapp">
+          <a href="https://wa.me/917386533633" target="_blank" rel="noreferrer" className="alt-link whatsapp">
             WhatsApp us
           </a>
         </div>
