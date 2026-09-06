@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "./Logo.jsx";
 
 const links = [
@@ -24,7 +25,10 @@ export default function Header() {
             <a key={l.href} href={l.href}>{l.label}</a>
           ))}
         </div>
-        <a href="#contact" className="nav-cta">Get in touch</a>
+        <div className="nav-actions">
+          <Link to="/login" className="nav-login">Client Login</Link>
+          <a href="#contact" className="nav-cta">Get in touch</a>
+        </div>
         <button
           className={`nav-burger${open ? " open" : ""}`}
           aria-label="Toggle menu"
@@ -38,6 +42,7 @@ export default function Header() {
         {links.map((l) => (
           <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
         ))}
+        <Link to="/login" onClick={() => setOpen(false)}>Client Login</Link>
         <a href="#contact" className="nav-cta" onClick={() => setOpen(false)}>Get in touch</a>
       </div>
     </header>
