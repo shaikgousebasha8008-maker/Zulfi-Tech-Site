@@ -7,15 +7,15 @@ export default function Hero() {
         <div className="eyebrow-mark">
           <div className="diamond"></div>
           <div className="eline"></div>
-          <span className="txt">CLOUD &middot; BARE METAL &middot; EMAIL &middot; WEB</span>
+          <span className="txt">CLOUD INFRASTRUCTURE &middot; EMAIL SYSTEMS &middot; AUTOMATION</span>
         </div>
         <h1>
           Infrastructure <span className="accent">that delivers.</span>
         </h1>
         <p className="lede">
-          Cloud, bare metal, and email infrastructure built and managed properly —
-          Google Cloud, AWS, dedicated servers and VMs, deliverability engineering,
-          and the websites that sit on top of it all.
+          We run the cloud servers, email systems, and internal automation that most
+          teams don't have in-house — configured properly, monitored continuously,
+          and owned by people you can actually reach when something needs attention.
         </p>
         <div className="hero-ctas">
           <a href="#services" className="btn-primary">View services</a>
@@ -25,10 +25,10 @@ export default function Hero() {
           <span>Google Cloud</span>
           <span>AWS</span>
           <span>SPF · DKIM · DMARC</span>
-          <span>Bare Metal</span>
+          <span>CI/CD &amp; Automation</span>
         </div>
         <div className="hero-stats">
-          <div className="hero-stat"><div className="num">5</div><div className="lbl">infrastructure domains</div></div>
+          <div className="hero-stat"><div className="num">3</div><div className="lbl">core disciplines</div></div>
           <div className="hero-stat"><div className="num">1</div><div className="lbl">team, start to finish</div></div>
           <div className="hero-stat"><div className="num">24/7</div><div className="lbl">monitored environments</div></div>
         </div>

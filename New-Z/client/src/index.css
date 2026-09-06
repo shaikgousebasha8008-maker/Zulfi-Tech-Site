@@ -65,10 +65,9 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .hero { background: var(--graphite); color: var(--cream); padding: 130px 0 130px; position: relative; overflow: hidden; }
 .hero-glow {
   position: absolute; width: 700px; height: 700px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(193,127,58,0.22) 0%, rgba(193,127,58,0) 70%);
-  top: -250px; right: -200px; z-index: 1; animation: drift 14s ease-in-out infinite alternate;
+  background: radial-gradient(circle, rgba(193,127,58,0.16) 0%, rgba(193,127,58,0) 70%);
+  top: -250px; right: -200px; z-index: 1;
 }
-@keyframes drift { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(-40px,40px) scale(1.08); } }
 .hero-gridbg {
   position: absolute; inset: 0;
   background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
@@ -110,10 +109,9 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 
 /* Services */
 .services { padding: 120px 0; position: relative; }
-.service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: #DCD8D0; border: 1px solid #DCD8D0; }
-.service-card { background: var(--cream); padding: 40px 36px; transition: background .3s ease, transform .3s ease; position: relative; }
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #DCD8D0; border: 1px solid #DCD8D0; }
+.service-card { background: var(--cream); padding: 40px 32px; transition: background .3s ease, transform .3s ease; position: relative; }
 .service-card:hover { background: #FFFFFF; transform: translateY(-3px); z-index: 3; box-shadow: 0 20px 40px rgba(20,23,29,0.08); }
-.service-card.wide { grid-column: span 2; }
 .service-mark {
   width: 54px; height: 54px; border: 1.5px solid var(--graphite); display: flex; align-items: center; justify-content: center;
   font-family: Georgia, serif; font-weight: 700; font-size: 18px; margin-bottom: 22px; position: relative; transition: border-color .3s ease;
@@ -122,7 +120,10 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .service-card:hover .service-mark { border-color: var(--bronze); }
 .service-card:hover .service-mark::after { width: 100%; opacity: 0.08; }
 .service-card h3 { font-size: 21px; margin-bottom: 10px; }
-.service-card p { color: #5B5F68; font-size: 15px; max-width: 420px; }
+.service-card p { color: #5B5F68; font-size: 14.5px; }
+.service-list { list-style: none; margin-top: 18px; border-top: 1px solid #E4E1DA; padding-top: 16px; }
+.service-list li { font-size: 13.5px; color: #5B5F68; padding: 6px 0 6px 18px; position: relative; }
+.service-list li::before { content: '\2013'; position: absolute; left: 0; color: var(--bronze); }
 
 /* Process */
 .process { padding: 120px 0; background: #EFECE5; }
@@ -231,7 +232,6 @@ footer.site-footer { background: var(--graphite); color: #6B6F77; padding: 72px 
   .hero h1 { font-size: 36px; }
   .hero-stats { gap: 28px; flex-wrap: wrap; }
   .service-grid { grid-template-columns: 1fr; }
-  .service-card.wide { grid-column: span 1; }
   .process-grid { grid-template-columns: 1fr; gap: 36px; }
   .process-connector { display: none; }
   .why-grid { grid-template-columns: 1fr; }
@@ -243,6 +243,7 @@ footer.site-footer { background: var(--graphite); color: #6B6F77; padding: 72px 
   .nav-burger, .nav-mobile { display: none; }
 }
 @media (max-width: 900px) {
+  .service-grid { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .process-connector { display: none; }
 }

@@ -1,9 +1,9 @@
 const expertise = [
-  "Cloud infrastructure — Google Cloud & AWS",
-  "Systems engineering — bare metal & virtualization",
-  "Email deliverability & DNS",
-  "Full-stack development",
-  "Network operations & monitoring",
+  "Cloud infrastructure — Google Cloud, AWS & bare metal",
+  "Email systems — SMTP, DNS & deliverability",
+  "Automation — AI agents, CRM & workflows",
+  "Full-stack development for the dashboards on top",
+  "Network operations & 24/7 monitoring",
 ];
 
 export default function TeamPricing() {
