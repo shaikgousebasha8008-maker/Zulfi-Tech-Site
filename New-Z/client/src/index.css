@@ -129,6 +129,33 @@ button.nav-cta { border: none; cursor: pointer; font-family: inherit; }
 .service-list li { font-size: 13.5px; color: #5B5F68; padding: 6px 0 6px 18px; position: relative; }
 .service-list li::before { content: '\2013'; position: absolute; left: 0; color: var(--bronze); }
 
+/* Platform */
+.platform { padding: 120px 0; }
+.platform-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 20px; }
+.platform-panel { border: 1px solid #DCD8D0; padding: 32px 30px; }
+.platform-panel h3 { font-size: 19px; margin-bottom: 10px; }
+.platform-panel p { color: #5B5F68; font-size: 14.5px; margin-bottom: 24px; }
+
+.arch-diagram { width: 100%; height: auto; }
+.arch-label { font-size: 11px; fill: #33373F; font-family: -apple-system, sans-serif; }
+.arch-label-strong { font-size: 12px; fill: #20242B; font-weight: 700; font-family: -apple-system, sans-serif; }
+.arch-label-muted { font-size: 10px; fill: #8B8F97; font-family: -apple-system, sans-serif; }
+
+.delivery-chart { display: flex; flex-direction: column; gap: 26px; }
+.delivery-stats { display: flex; gap: 16px; }
+.delivery-stat { flex: 1; text-align: center; }
+.delivery-stat .num { font-family: Georgia, serif; font-size: 24px; }
+.delivery-stat .lbl { font-size: 12px; color: #5B5F68; margin-top: 4px; }
+.delivery-donut-wrap { display: flex; justify-content: center; }
+.delivery-donut { width: 160px; height: 160px; }
+.donut-center-num { font-family: Georgia, serif; font-size: 22px; font-weight: 700; fill: var(--graphite); }
+.donut-center-lbl { font-size: 11px; fill: #5B5F68; }
+.delivery-legend { display: flex; flex-direction: column; gap: 8px; }
+.legend-row { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #33373F; }
+.legend-swatch { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+.legend-label { flex: 1; }
+.legend-value { font-weight: 700; color: var(--graphite); }
+
 /* Process */
 .process { padding: 120px 0; background: #EFECE5; }
 .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 20px; }
@@ -274,9 +301,12 @@ footer.site-footer { background: var(--graphite); color: #6B6F77; padding: 72px 
 }
 @media (max-width: 900px) {
   .service-grid { grid-template-columns: 1fr; }
+  .platform-grid { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .process-connector { display: none; }
 }
 @media (max-width: 500px) {
   .qf-row { grid-template-columns: 1fr; }
+  .delivery-stats { flex-wrap: wrap; }
+  .delivery-stat { flex: 1 1 40%; }
 }
