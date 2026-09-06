@@ -19,6 +19,7 @@ export default function Footer() {
         <div className="footer-col">
           <div className="footer-h">Company</div>
           <a href="mailto:info@zulfi-tech.com">info@zulfi-tech.com</a>
+          <Link to="/login">Client Login</Link>
           <Link to="/privacy">Privacy Policy</Link>
           <Link to="/terms">Terms of Service</Link>
         </div>
