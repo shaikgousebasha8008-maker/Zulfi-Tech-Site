@@ -1072,3 +1072,6 @@ html:not([data-theme="light"]) .lg-back, html:not([data-theme="light"]) .lg-new 
 html:not([data-theme="light"]) .lg-top .theme-toggle { color: #DCD8D0; border-color: rgba(255,255,255,.12); }
 
 html[data-theme="light"] .hv-console { background: #1D2129; box-shadow: 0 0 0 1px rgba(20,23,29,.12), 0 40px 90px rgba(20,23,29,.25); }
+
+.pp-logo, .zp-panel .pp-logo, html[data-theme="light"] .zp-panel .pp-logo { padding: 0; background: none; border: 0; border-radius: 50%; box-shadow: 0 6px 16px rgba(20,23,29,.18); }
+.zp-logo { border-radius: 50%; }

@@ -33,7 +33,7 @@ function AppPreview() {
           <span>Gulmarg trip plan</span>
         </aside>
         <div className="zp-main">
-          <img src="/zulfiera-logo-dark.svg" alt="" className="zp-logo" />
+          <img src="/zulfiera-mark.svg" alt="" className="zp-logo" />
           <p className="zp-eyebrow">Zulfi<span>Era AI</span></p>
           <h4>What can I help you with<span>?</span></h4>
           <div className="zp-sugg">
@@ -68,7 +68,7 @@ export default function Platform() {
         <div className="platform-grid">
           <div className="platform-panel zp-panel reveal">
             <div className="pp-head">
-              <img src="/zulfiera-logo-dark.svg" alt="" className="pp-logo" />
+              <img src="/zulfiera-mark.svg" alt="" className="pp-logo" />
               <div><h3>Zulfi<span className="gold">Era AI</span></h3><small>AI assistant · web, iPhone and Android</small></div>
               <span className="pp-live"><i></i>Live</span>
             </div>

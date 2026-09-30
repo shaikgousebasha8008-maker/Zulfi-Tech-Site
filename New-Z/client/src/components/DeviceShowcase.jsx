@@ -4,26 +4,12 @@ import Logo from "./Logo.jsx";
 // "See it in action": a MacBook mock-up running a macOS-style "ZulfiTech Studio" window,
 // with tabs for the product work we build. All figures on the screens are sample data.
 
-const SPARK = "M60 19 C62.7 43.3 76.7 57.3 101 60 C76.7 62.7 62.7 76.7 60 101 C57.3 76.7 43.3 62.7 19 60 C43.3 57.3 57.3 43.3 60 19 Z";
 const STAGE_W = 960; // the screen is designed at 960 x 600 and scaled to fit
 const STAGE_H = 600;
 
 function Spark({ size = 18 }) {
-  // ZulfiEra AI mark: the Spark Z with its orbit string.
-  return (
-    <svg width={size} height={size} viewBox="0 0 120 120" aria-hidden="true">
-      <defs>
-        <linearGradient id="dsg" x1="0.15" y1="0" x2="0.85" y2="1">
-          <stop offset="0" stopColor="#EDB866" /><stop offset="0.5" stopColor="#C17F3A" /><stop offset="1" stopColor="#8A4A1F" />
-        </linearGradient>
-        <mask id="dsz"><rect width="120" height="120" fill="#fff" /><path d="M47.6 49.6 H72.4 L47.6 70.4 H72.4" fill="none" stroke="#000" strokeWidth="7.6" strokeLinecap="round" strokeLinejoin="round" /></mask>
-      </defs>
-      <path d="M8 74 A56 20 -28 0 1 112 46" fill="none" stroke="#C17F3A" strokeWidth="5" strokeLinecap="round" opacity=".5" />
-      <path d={SPARK} fill="url(#dsg)" mask="url(#dsz)" />
-      <path d="M112 46 A56 20 -28 0 1 8 74" fill="none" stroke="#C17F3A" strokeWidth="5.5" strokeLinecap="round" />
-      <circle cx="43.4" cy="88.4" r="7" fill="#C17F3A" />
-    </svg>
-  );
+  // ZulfiEra AI mark: the Zulfiqar over a Z monogram.
+  return <img src="/zulfiera-mark.svg" width={size} height={size} alt="" aria-hidden="true" style={{ flexShrink: 0 }} />;
 }
 
 /* ---------- AI Assistant ---------- */
