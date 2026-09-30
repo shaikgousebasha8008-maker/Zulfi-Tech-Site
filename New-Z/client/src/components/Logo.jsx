@@ -1,32 +1,13 @@
-export default function Logo({ variant = "onLight", showText = false, className = "" }) {
-  const ink = variant === "onDark" ? "#F5F3EF" : "#20242B";
-  const bronze = variant === "onDark" ? "#E0A868" : "#C17F3A";
-  const slogan = variant === "onDark" ? "#A9ADB5" : "#7A7F87";
-  const viewBox = showText ? "0 0 320 420" : "55 45 210 210";
-
+// Brand emblem shared by ZulfiTech and ZulfiEra AI: the Zulfiqar over a Z monogram,
+// in a laurel wreath and beaded gold ring (public/zulfiera-logo.svg).
+export default function Logo({ showText = false, className = "" }) {
+  const mark = <img src="/zulfiera-logo.svg?v=5" alt="" className={`logo-mark${showText ? "" : ` ${className}`}`} />;
+  if (!showText) return mark;
   return (
-    <svg
-      className={`logo-mark${className ? ` ${className}` : ""}`}
-      viewBox={viewBox}
-      role="img"
-      aria-label="ZulfiTech"
-    >
-      <g className="logo-ring">
-        <path d="M 65 150 A 95 95 0 0 0 255 150" fill="none" stroke={ink} className="lk" strokeWidth="8" strokeLinecap="round" />
-        <path d="M 255 150 A 95 95 0 0 0 65 150" fill="none" stroke={bronze} strokeWidth="8" strokeLinecap="round" />
-      </g>
-      <g className="logo-mono" transform="translate(99, 104)">
-        <line x1="17" y1="0" x2="112" y2="0" stroke={ink} className="lk" strokeWidth="12" strokeLinecap="round" />
-        <line x1="102" y1="4" x2="20" y2="88" stroke={ink} className="lk" strokeWidth="12" strokeLinecap="round" />
-        <line x1="10" y1="92" x2="112" y2="92" stroke={ink} className="lk" strokeWidth="12" strokeLinecap="round" />
-        <line x1="61" y1="0" x2="61" y2="92" stroke={bronze} strokeWidth="12" strokeLinecap="round" />
-      </g>
-      {showText && (
-        <>
-          <text x="160" y="305" fontFamily="Georgia, 'Times New Roman', serif" fontSize="26" fontWeight="600" letterSpacing="4" fill={ink} className="lkf" textAnchor="middle">ZULFITECH</text>
-          <text x="160" y="332" fontFamily="Georgia, 'Times New Roman', serif" fontSize="11" letterSpacing="2" fill={slogan} textAnchor="middle">AI &#183; CLOUD &#183; AUTOMATION</text>
-        </>
-      )}
-    </svg>
+    <div className={`logo-lockup ${className}`} role="img" aria-label="ZulfiTech">
+      {mark}
+      <span className="logo-name">ZULFI<span className="gold">TECH</span></span>
+      <span className="logo-slogan">AI · CLOUD · AUTOMATION</span>
+    </div>
   );
 }
