@@ -1,10 +1,18 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../components/Logo.jsx";
+import ThemeToggle from "../components/ThemeToggle.jsx";
+
+const perks = [
+  { icon: "◉", t: "Live service status", d: "Uptime and health of everything we run for you" },
+  { icon: "✎", t: "Support tickets", d: "Raise and track requests with our engineers" },
+  { icon: "▤", t: "Invoices and reports", d: "Billing, usage and monthly reports in one place" },
+];
 
 export default function Login() {
   const navigate = useNavigate();
   const [form, setForm] = useState({ email: "", password: "" });
+  const [showPw, setShowPw] = useState(false);
   const [status, setStatus] = useState(null); // null | "sending" | "error"
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -31,55 +39,65 @@ export default function Login() {
   };
 
   return (
-    <div>
-      <header className="site-header">
-        <nav>
-          <Link to="/" className="brand">
-            <Logo variant="onDark" className="brand-mark" />
-            Zulfi<span className="accent">Tech</span>
-          </Link>
-        </nav>
-      </header>
-
-      <div className="auth-page">
-        <div className="auth-card">
-          <div className="eyebrow-mark" style={{ justifyContent: "center", margin: "0 auto 22px" }}>
-            <div className="diamond" style={{ borderColor: "var(--graphite)" }}></div>
-            <div className="eline" style={{ background: "var(--graphite)", width: 40, animation: "none" }}></div>
-            <span className="txt" style={{ color: "var(--graphite)" }}>CLIENT LOGIN</span>
+    <div className="lg-page">
+      <aside className="lg-brand">
+        <Link to="/" className="brand lg-logo">
+          <Logo variant="onDark" className="brand-mark" />
+          Zulfi<span className="accent">Tech</span>
+        </Link>
+        <div className="lg-brand-body">
+          <div className="eyebrow-mark"><span className="txt">Client portal</span></div>
+          <h2>Everything we run for you, in one place.</h2>
+          <ul className="lg-perks">
+            {perks.map((p) => (
+              <li key={p.t}><span className="lg-ic">{p.icon}</span><div><b>{p.t}</b><small>{p.d}</small></div></li>
+            ))}
+          </ul>
+          <div className="lg-status">
+            <span className="mx-okdot"></span>
+            <div><b>All systems operational</b><small>Monitored 24/7 by the ZulfiTech team</small></div>
           </div>
-          <h1>Sign in to your portal</h1>
-          <p className="auth-sub">Server status, tickets, and invoices for the infrastructure we manage for you.</p>
+        </div>
+        <p className="lg-foot">© {new Date().getFullYear()} ZulfiTech · <Link to="/privacy">Privacy</Link> · <Link to="/terms">Terms</Link></p>
+      </aside>
 
-          <form className="auth-form" onSubmit={handleSubmit}>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email address"
-              value={form.email}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={form.password}
-              onChange={handleChange}
-              required
-            />
-            <button type="submit" className="btn-primary" style={{ width: "100%" }} disabled={status === "sending"}>
-              {status === "sending" ? "Signing in..." : "Sign in"}
+      <main className="lg-main">
+        <div className="lg-top"><Link to="/" className="lg-back">← Back to website</Link><ThemeToggle /></div>
+        <div className="lg-card">
+          <span className="lg-lock" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2.5" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></svg>
+          </span>
+          <h1>Sign in to your portal</h1>
+          <p className="lg-sub">Use the email and password provided by ZulfiTech.</p>
+
+          <form className="lg-form" onSubmit={handleSubmit}>
+            <label>
+              <span>Email address</span>
+              <input type="email" name="email" placeholder="you@company.com" autoComplete="email" value={form.email} onChange={handleChange} required />
+            </label>
+            <label>
+              <span>Password</span>
+              <div className="lg-pw">
+                <input type={showPw ? "text" : "password"} name="password" placeholder="••••••••" autoComplete="current-password" value={form.password} onChange={handleChange} required />
+                <button type="button" onClick={() => setShowPw((v) => !v)} aria-label={showPw ? "Hide password" : "Show password"}>
+                  {showPw ? "Hide" : "Show"}
+                </button>
+              </div>
+            </label>
+            <button type="submit" className="btn-primary lg-submit" disabled={status === "sending"}>
+              {status === "sending" ? "Signing in…" : "Sign in"}
             </button>
             {status === "error" && <p className="form-status error">{errorMsg}</p>}
           </form>
 
-          <p className="auth-footnote">
-            Not a client yet? <a href="mailto:info@zulfi-tech.com">Get in touch</a> or{" "}
-            <Link to="/#contact">request a quote</Link>.
-          </p>
+          <div className="lg-help">
+            <span>Forgot your password?</span>
+            <a href="mailto:info@zulfi-tech.com?subject=Portal%20password%20reset">Contact support</a>
+          </div>
+          <p className="lg-secure">🔒 Encrypted connection · Secure session cookies</p>
         </div>
-      </div>
+        <p className="lg-new">Not a client yet? <Link to="/#contact">Request a proposal</Link></p>
+      </main>
     </div>
   );
 }

@@ -7,25 +7,27 @@ export default function Footer() {
       <div className="wrap footer-grid">
         <div className="footer-brand">
           <Logo variant="onDark" showText className="footer-badge" />
-          <p>Cloud, bare metal, and email infrastructure — built and managed by one team, start to finish.</p>
+          <p>AI and SaaS products, cloud and bare-metal infrastructure, and websites, dashboards and automation, built and run by one team.</p>
         </div>
         <div className="footer-col">
           <div className="footer-h">Site</div>
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
-          <a href="#case-studies">Case Studies</a>
+          <a href="#services">Solutions</a>
+          <a href="#product">ZulfiEra AI</a>
+          <a href="#process">Approach</a>
+          <a href="#case-studies">Our work</a>
           <a href="#faq">FAQ</a>
         </div>
         <div className="footer-col">
           <div className="footer-h">Company</div>
           <a href="mailto:info@zulfi-tech.com">info@zulfi-tech.com</a>
+          <a href="https://ai.zulfi-tech.com" target="_blank" rel="noreferrer">ZulfiEra AI</a>
           <Link to="/login">Client Login</Link>
           <Link to="/privacy">Privacy Policy</Link>
           <Link to="/terms">Terms of Service</Link>
         </div>
       </div>
       <div className="wrap footer-bottom">
-        <div>&copy; 2026 ZulfiTech. Infrastructure that delivers.</div>
+        <div>&copy; 2026 ZulfiTech. All rights reserved.</div>
       </div>
       {/*
         Tawk.to live chat - paste your embed script here once you have your account code.

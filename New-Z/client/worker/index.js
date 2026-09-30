@@ -43,9 +43,13 @@ async function handleQuote(request, env) {
   }
 
   const { name, email, details } = body;
+  const esc = (v) => String(v).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   if (!name || !email || !details) {
     return new Response(JSON.stringify({ error: "Name, email, and details are all required." }), { status: 400 });
+  }
+  if (String(name).length > 120 || String(email).length > 200 || String(details).length > 5000 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return new Response(JSON.stringify({ error: "Please check your name, email and details." }), { status: 400 });
   }
 
   try {
@@ -59,8 +63,8 @@ async function handleQuote(request, env) {
         from: "ZulfiTech Website <onboarding@resend.dev>",
         to: env.TO_EMAIL || "shaikgousebasha8008@gmail.com",
         reply_to: email,
-        subject: `Quote request from ${name}`,
-        html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Details:</strong></p><p>${details.replace(/\n/g, "<br>")}</p>`,
+        subject: `Quote request from ${String(name).replace(/[\r\n]+/g, " ").slice(0, 120)}`,
+        html: `<p><strong>Name:</strong> ${esc(name)}</p><p><strong>Email:</strong> ${esc(email)}</p><p><strong>Details:</strong></p><p>${esc(details).replace(/\n/g, "<br>")}</p>`,
       }),
     });
 

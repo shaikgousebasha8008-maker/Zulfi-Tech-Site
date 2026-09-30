@@ -2,24 +2,28 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "Do you require a long-term contract?",
-    a: "No. Most engagements start month-to-month. If a client wants a contracted term for pricing stability, that's available too, but it's never a requirement.",
+    q: "What does ZulfiTech do?",
+    a: "We work across three practices: AI and SaaS products (including our own assistant, ZulfiEra AI), cloud and bare-metal infrastructure, and websites, dashboards and automation. Many clients use us for more than one, with a single team across all of it.",
+  },
+  {
+    q: "Can you build a custom AI assistant for our company?",
+    a: "Yes. We build AI assistants and agents that work with your documents, tools and workflows, and we can deploy them on the cloud or on your own servers when data must stay in-house.",
   },
   {
     q: "Can you take over infrastructure someone else set up?",
-    a: "Yes — this is a large part of what we do. We start with an audit of what exists (DNS, IPs, server configuration, sending history) before touching anything, so we understand what we're inheriting.",
+    a: "Yes, this is a large part of what we do. We start with a review of what exists (servers, cloud accounts, deployments and costs) before changing anything, so we understand exactly what we're inheriting.",
   },
   {
-    q: "We already have IPs on a blocklist. Can you help?",
-    a: "Usually, yes. Delisting starts with figuring out why the listing happened — misconfigured records, a compromised sender, genuine complaint volume — since the fix depends entirely on the cause.",
+    q: "Which cloud platforms do you work with?",
+    a: "Mainly Google Cloud, AWS and Cloudflare, plus dedicated bare-metal servers from a range of providers. If you're on another platform, tell us what you run and we'll say plainly whether we can support it.",
   },
   {
-    q: "Do you only work with Google Cloud and AWS?",
-    a: "Those are the two we work with most, alongside bare metal and VMs from a range of providers. If you're on a different platform, tell us what you're running and we'll say plainly whether it's something we can support.",
+    q: "Do you require a long-term contract?",
+    a: "No. Most engagements start monthly or as a fixed-scope project. Annual terms are available if you'd like pricing stability, but they're never required.",
   },
   {
-    q: "What do you need from us to get a quote?",
-    a: "A rough picture of what you're running or want built — approximate server/IP count, sending volume if it's a deliverability engagement, and your timeline. Use the form below or email us directly.",
+    q: "What do you need from us to get a proposal?",
+    a: "A short description of what you want to build or improve, your current setup if there is one, and your timeline. Use the form below and we'll reply with next steps.",
   },
 ];
 
@@ -32,7 +36,7 @@ export default function FAQ() {
         <div className="section-head reveal">
           <div className="kicker"><div className="diamond"></div><div className="kline"></div><span className="txt">FAQ</span></div>
           <h2>Common questions</h2>
-          <p>Answers to what usually comes up before an engagement starts.</p>
+          <p>Answers to what usually comes up before a project starts.</p>
         </div>
         <div className="faq-list">
           {faqs.map((f, i) => {

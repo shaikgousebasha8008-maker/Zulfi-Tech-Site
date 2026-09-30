@@ -20,7 +20,7 @@ export default function Terms() {
         <p>These terms govern your use of ZulfiTech's website and services. By engaging us for services, you agree to the terms below.</p>
 
         <h2>Services</h2>
-        <p>ZulfiTech provides cloud infrastructure (Google Cloud, AWS), bare metal and virtual machine provisioning, email deliverability engineering, and website development services. Specific scope, deliverables, and pricing for any engagement are agreed separately in writing (email or signed quote) before work begins.</p>
+        <p>ZulfiTech provides AI and SaaS products and development, cloud infrastructure (Google Cloud, AWS, Cloudflare), bare-metal and virtual machine provisioning, and website, dashboard and automation services. Specific scope, deliverables, and pricing for any engagement are agreed separately in writing (email or signed quote) before work begins.</p>
 
         <h2>Quotes and pricing</h2>
         <p>All pricing is custom-quoted based on the scope of infrastructure requested. A quote is valid for the period stated at the time it is issued and does not constitute a binding commitment until accepted by both parties.</p>
@@ -28,15 +28,15 @@ export default function Terms() {
         <h2>Client responsibilities</h2>
         <ul>
           <li>Provide accurate information necessary to scope and deliver services</li>
-          <li>Ensure any domains, IP ranges, or sending infrastructure you ask us to manage are legally owned or controlled by you</li>
-          <li>Comply with applicable laws regarding email sending, data handling, and acceptable use of any infrastructure we provision on your behalf</li>
+          <li>Ensure any domains, accounts, servers, data or systems you ask us to manage are legally owned or controlled by you</li>
+          <li>Comply with applicable laws regarding data protection, privacy and acceptable use of any infrastructure or software we provide on your behalf</li>
         </ul>
 
         <h2>Acceptable use</h2>
-        <p>We do not knowingly provision or maintain infrastructure used for unsolicited bulk email in violation of anti-spam law, fraud, or any other illegal activity. We reserve the right to suspend services if infrastructure we manage is found to be used for such purposes.</p>
+        <p>We do not knowingly provision or maintain infrastructure or software used for fraud, abuse, or any other illegal activity. We reserve the right to suspend services if infrastructure we manage is found to be used for such purposes.</p>
 
         <h2>Limitation of liability</h2>
-        <p>While we take reasonable care in configuring and monitoring the infrastructure we manage, ZulfiTech is not liable for indirect, incidental, or consequential damages arising from service interruptions, third-party provider outages (e.g. cloud providers, ISPs, blocklist operators), or actions taken by third parties such as Spamhaus or mailbox providers.</p>
+        <p>While we take reasonable care in configuring and monitoring the infrastructure we manage, ZulfiTech is not liable for indirect, incidental, or consequential damages arising from service interruptions, third-party provider outages (e.g. cloud, network or AI model providers), or actions taken by other third parties.</p>
 
         <h2>Termination</h2>
         <p>Either party may terminate an ongoing engagement per the terms agreed in the relevant service quote or contract. Outstanding fees for work performed remain payable upon termination.</p>

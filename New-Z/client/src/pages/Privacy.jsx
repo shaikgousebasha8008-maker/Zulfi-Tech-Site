@@ -17,7 +17,7 @@ export default function Privacy() {
         <h1>Privacy Policy</h1>
         <p className="updated">Last updated: September 2026</p>
 
-        <p>ZulfiTech ("we", "us", "our") provides cloud, bare metal, email deliverability, and website infrastructure services. This policy explains what information we collect when you use our website or services, and how we handle it.</p>
+        <p>ZulfiTech ("we", "us", "our") provides AI and SaaS products, cloud and bare-metal infrastructure, and website, dashboard and automation services. This policy explains what information we collect when you use our website or services, and how we handle it.</p>
 
         <h2>Information we collect</h2>
         <p>When you submit a quote request or contact form on this site, we collect the information you provide directly: your name, email address, and any details you share about your infrastructure needs.</p>

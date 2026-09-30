@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo.jsx";
+import ThemeToggle from "./ThemeToggle.jsx";
 
 const links = [
-  { href: "#services", label: "Services" },
-  { href: "#process", label: "Process" },
-  { href: "#case-studies", label: "Case Studies" },
-  { href: "#team", label: "Team" },
+  { href: "#services", label: "Solutions" },
+  { href: "#product", label: "ZulfiEra AI" },
+  { href: "#showcase", label: "AI & Automation" },
   { href: "#faq", label: "FAQ" },
 ];
 
@@ -26,9 +26,11 @@ export default function Header() {
           ))}
         </div>
         <div className="nav-actions">
-          <Link to="/login" className="nav-login">Client Login</Link>
+          <ThemeToggle />
+          <Link to="/login" className="nav-login"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" /></svg>Client Login</Link>
           <a href="#contact" className="nav-cta">Get in touch</a>
         </div>
+        <ThemeToggle className="theme-toggle-mobile" />
         <button
           className={`nav-burger${open ? " open" : ""}`}
           aria-label="Toggle menu"

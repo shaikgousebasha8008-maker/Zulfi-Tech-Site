@@ -1,23 +1,23 @@
 const steps = [
   {
     n: "01",
-    title: "Audit",
-    desc: "We look at what you're running today — cloud spend, server sprawl, DNS records, sender reputation — and tell you plainly what's solid and what isn't.",
+    title: "Discover",
+    desc: "We learn your goals and review what you run today (applications, infrastructure, costs and workflows), then tell you plainly what's solid and what isn't.",
   },
   {
     n: "02",
-    title: "Scope",
-    desc: "A written quote covering exactly what gets built or fixed, on what timeline, for what cost. No open-ended retainers before you know what you're paying for.",
+    title: "Design & scope",
+    desc: "A written proposal with the architecture, deliverables, timeline and cost. No open-ended retainers before you know exactly what you're paying for.",
   },
   {
     n: "03",
-    title: "Build",
-    desc: "Provisioning, migration, or remediation happens with a named engineer on point — the same person you'll talk to if something needs attention afterward.",
+    title: "Build & launch",
+    desc: "Engineering, migration or rollout happens with a named lead on point, the same person you'll speak to after go-live.",
   },
   {
     n: "04",
-    title: "Monitor",
-    desc: "Once it's live, it's watched — uptime, bounce and complaint rates, blocklist status — so problems get caught before they become outages.",
+    title: "Operate & improve",
+    desc: "Once it's live, it's monitored for uptime, performance, security and cost, and improved continuously as your business grows.",
   },
 ];
 
@@ -26,9 +26,9 @@ export default function Process() {
     <section className="process" id="process">
       <div className="wrap">
         <div className="section-head reveal">
-          <div className="kicker"><div className="diamond"></div><div className="kline"></div><span className="txt">How we work</span></div>
+          <div className="kicker"><div className="diamond"></div><div className="kline"></div><span className="txt">Our approach</span></div>
           <h2>Four steps, no surprises</h2>
-          <p>Every engagement follows the same path, whether it's a single mail server or a full migration.</p>
+          <p>Every engagement follows the same path, whether it's a single website or a full platform build.</p>
         </div>
         <div className="process-grid">
           {steps.map((s, i) => (

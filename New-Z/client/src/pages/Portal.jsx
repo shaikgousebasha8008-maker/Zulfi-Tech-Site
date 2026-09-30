@@ -65,7 +65,7 @@ export default function Portal() {
             </div>
             <div className="portal-card">
               <div className="portal-card-h">Monitoring</div>
-              <p>Uptime, bounce, and reputation monitoring for infrastructure we manage for you will appear here.</p>
+              <p>Uptime, performance and security monitoring for the systems we manage for you will appear here.</p>
             </div>
             <div className="portal-card">
               <div className="portal-card-h">Tickets</div>

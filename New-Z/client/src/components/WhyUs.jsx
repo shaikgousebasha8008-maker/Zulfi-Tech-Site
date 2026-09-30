@@ -1,18 +1,18 @@
 const points = [
   {
     idx: "01",
-    title: "We monitor what we manage",
-    desc: `Every environment we run comes with real visibility into delivery, uptime, and reputation — not just a status page that says "operational."`,
+    title: "We run what we build",
+    desc: "Our own products, including ZulfiEra AI, run on the same cloud and automation stack we deliver. You get engineering proven in production, not theory.",
   },
   {
     idx: "02",
     title: "One team, not a hand-off chain",
-    desc: "The people who provision your infrastructure are the same people who answer when something needs attention.",
+    desc: "The engineers who design your platform are the same people who launch it, monitor it and answer when you need them.",
   },
   {
     idx: "03",
-    title: "We fix root causes",
-    desc: "Blocklist issues, DNS mismatches, and reputation problems get diagnosed and resolved — not just restarted and hoped away.",
+    title: "Transparent and built to last",
+    desc: "Clear written scopes, no hidden markup on cloud costs, and documented systems you fully own, so you're never locked in.",
   },
 ];
 
@@ -21,9 +21,9 @@ export default function WhyUs() {
     <section className="why" id="why">
       <div className="wrap">
         <div className="section-head reveal">
-          <div className="kicker"><div className="diamond"></div><div className="kline"></div><span className="txt">Why us</span></div>
-          <h2>Why teams work with us</h2>
-          <p>We built our own tools to run this business, before we ever offered it as a service.</p>
+          <div className="kicker"><div className="diamond"></div><div className="kline"></div><span className="txt">Why ZulfiTech</span></div>
+          <h2>Why businesses choose ZulfiTech</h2>
+          <p>We built our own products and tools before we ever offered them as a service.</p>
         </div>
         <div className="why-grid">
           {points.map((p) => (

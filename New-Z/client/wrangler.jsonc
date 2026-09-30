@@ -7,6 +7,12 @@
     "binding": "ASSETS",
     "not_found_handling": "single-page-application"
   },
+  // Custom domains (previously set only in the dashboard; kept here so deploys never drop them).
+  "routes": [
+    { "pattern": "zulfi-tech.com", "custom_domain": true },
+    { "pattern": "www.zulfi-tech.com", "custom_domain": true }
+  ],
+  // ADMIN_SEED_SECRET (portal admin key) is an encrypted secret: `npx wrangler secret put ADMIN_SEED_SECRET`.
   "d1_databases": [
     {
       "binding": "DB",
