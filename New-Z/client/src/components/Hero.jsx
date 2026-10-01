@@ -70,15 +70,15 @@ export default function Hero() {
       <div className="wrap hero-grid">
         <div className="hero-copy">
           <div className="eyebrow-mark">
-            <span className="txt">AI &amp; SaaS &middot; Cloud &amp; Bare-Metal &middot; Websites &amp; Automation</span>
+            <span className="txt">AI &amp; SaaS &middot; Offline AI &middot; Cloud &amp; Bare-Metal &middot; Websites &amp; Automation</span>
           </div>
           <h1>
             AI, cloud and automation, <span className="accent">built for business.</span>
           </h1>
           <p className="lede">
-            ZulfiTech builds AI products, runs the cloud and bare-metal infrastructure behind them,
-            and delivers the websites, dashboards and automation that move a business forward,
-            owned end to end by one accountable team.
+            ZulfiTech builds AI products that run online or <b className="lede-hl">fully offline</b>, the cloud and
+            bare-metal infrastructure behind them, and the websites, dashboards and automation that move a
+            business forward. One accountable team, end to end.
           </p>
           <div className="hero-ctas">
             <a href="#services" className="btn-primary">Explore solutions</a>
@@ -86,6 +86,7 @@ export default function Hero() {
           </div>
           <div className="hero-badges">
             <span>AI &amp; LLM products</span>
+            <a href="#offline" className="badge-offline">🛰️ Offline &amp; satellite AI</a>
             <span>Google Cloud</span>
             <span>AWS</span>
             <span>Cloudflare</span>

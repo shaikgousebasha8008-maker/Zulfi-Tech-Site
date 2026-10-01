@@ -1158,3 +1158,23 @@ html[data-theme="light"] .oa-diagram { background: #14171D; border-color: #2a2f3
   .oa-diagram svg { min-width: 720px; }
   .oa-diagram::after { content: "← swipe to see the full workflow →"; display: block; text-align: center; font-size: 12px; color: #8B8F97; margin-top: 6px; position: sticky; left: 0; }
 }
+.oa-bezel { fill: #0B0D11; stroke: #4A505A; stroke-width: 1.5; }
+.oa-bezel-fill { fill: #0B0D11; }
+.oa-screen { fill: #1F242C; }
+.oa-side { fill: #171A20; }
+.oa-ui { fill: #3A3F48; }
+.oa-ui.gold { fill: #C17F3A; }
+.oa-ui.field { fill: #14171D; stroke: #4A505A; stroke-width: 1; }
+.oa-logo { fill: #E0A868; }
+.oa-base { fill: #B9BDC5; }
+.oa-dish { fill: #D5D8DE; stroke: #8D9199; stroke-width: 1; }
+.oa-dish-base { fill: #8D9199; }
+.oa-stand, .oa-feed { fill: none; stroke: #C7CAD1; stroke-width: 3.5; stroke-linecap: round; }
+.oa-feed { stroke-width: 2; }
+.oa-cable { fill: none; stroke: #6B7079; stroke-width: 2; stroke-dasharray: 2 4; }
+.lede-hl { color: var(--bronze-bright); font-weight: 600; }
+html[data-theme="light"] .lede-hl { color: #A8672C; }
+.hero-badges .badge-offline { font-size: 12.5px; letter-spacing: .3px; padding: 7px 14px; border-radius: 20px; color: #F8D596;
+  border: 1px solid rgba(224,168,104,.45); background: rgba(193,127,58,.12); transition: background .2s, border-color .2s; }
+.hero-badges .badge-offline:hover { background: rgba(193,127,58,.22); border-color: rgba(224,168,104,.8); }
+html[data-theme="light"] .hero-badges .badge-offline { color: #8A4F1E; background: rgba(193,127,58,.12); }
