@@ -7,6 +7,7 @@ const links = [
   { href: "#services", label: "Solutions" },
   { href: "#product", label: "ZulfiEra AI" },
   { href: "#showcase", label: "AI & Automation" },
+  { href: "#offline", label: "Offline AI" },
   { href: "#faq", label: "FAQ" },
 ];
 

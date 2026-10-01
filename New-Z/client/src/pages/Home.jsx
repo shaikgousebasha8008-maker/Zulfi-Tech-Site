@@ -2,6 +2,7 @@ import Header from "../components/Header.jsx";
 import Hero from "../components/Hero.jsx";
 import Services from "../components/Services.jsx";
 import Platform from "../components/Platform.jsx";
+import OfflineAI from "../components/OfflineAI.jsx";
 import DeviceShowcase from "../components/DeviceShowcase.jsx";
 import Process from "../components/Process.jsx";
 import WhyUs from "../components/WhyUs.jsx";
@@ -22,6 +23,7 @@ export default function Home() {
       <Services />
       <DeviceShowcase />
       <Platform />
+      <OfflineAI />
       <Process />
       <WhyUs />
       <CaseStudies />
