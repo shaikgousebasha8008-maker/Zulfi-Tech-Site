@@ -8,6 +8,7 @@ import {
   getSessionUser,
   deleteSession,
 } from "./auth.js";
+import { leadEmail, ackEmail } from "./emails.js";
 
 export default {
   async fetch(request, env) {
@@ -42,43 +43,85 @@ async function handleQuote(request, env) {
     return new Response(JSON.stringify({ error: "Invalid request." }), { status: 400 });
   }
 
-  const { name, email, details } = body;
-  const esc = (v) => String(v).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const { name, email, details } = body || {};
 
   if (!name || !email || !details) {
-    return new Response(JSON.stringify({ error: "Name, email, and details are all required." }), { status: 400 });
+    return json({ error: "Name, email, and details are all required." }, 400);
   }
-  if (String(name).length > 120 || String(email).length > 200 || String(details).length > 5000 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return new Response(JSON.stringify({ error: "Please check your name, email and details." }), { status: 400 });
+  if (String(name).length > 120 || String(email).length > 200 || String(details).length > 5000 || !isValidEmail(email)) {
+    return json({ error: "Please check your name, email and details." }, 400);
   }
 
+  // Contact.jsx sends "[Interested in: <service>]\n<message>".
+  const m = /^\[Interested in: ([^\]\n]{1,60})\]\s*/.exec(String(details));
+  const service = m ? m[1].trim() : "";
+  const message = m ? String(details).slice(m[0].length) : String(details);
+  const ip = request.headers.get("CF-Connecting-IP") || "";
+  const country = request.cf?.country || "";
+  const to = email.trim().toLowerCase();
+
+  // Every request is kept in D1, and limits stop the form being used to flood inboxes.
+  await ensureQuoteTable(env);
+  const hourAgo = Date.now() - 3600_000;
+  const dayAgo = Date.now() - 86400_000;
+  const perIp = await env.DB.prepare("SELECT COUNT(*) AS n FROM quote_requests WHERE ip = ? AND created_at > ?").bind(ip, hourAgo).first();
+  if (ip && perIp.n >= 3) {
+    return json({ error: "You've sent a few requests already. Please wait an hour or email us directly." }, 429);
+  }
+  const acksToday = await env.DB.prepare("SELECT COUNT(*) AS n FROM quote_requests WHERE email = ? AND ack_sent = 1 AND created_at > ?").bind(to, dayAgo).first();
+
+  const from = env.QUOTE_FROM || "ZulfiTech <no-reply@zulfi-tech.com>";
+  const owner = env.TO_EMAIL || "shaikgousebasha8008@gmail.com";
+  const lead = leadEmail({ name, email: to, service, message, ip, country });
+
+  // Own-domain sender first; resend.dev only if the domain isn't verified for this key (owner copy only).
+  let sent = await sendEmail(env, { from, to: owner, reply_to: to, ...lead });
+  let domainOk = sent.ok;
+  if (!sent.ok) sent = await sendEmail(env, { from: "ZulfiTech Website <onboarding@resend.dev>", to: owner, reply_to: to, ...lead });
+
+  let ackSent = 0;
+  if (domainOk && acksToday.n < 2) {
+    const firstName = String(name).trim().split(/\s+/)[0].replace(/[^\p{L}\p{M}'-]/gu, "").slice(0, 30);
+    const ack = await sendEmail(env, { from, to, reply_to: owner, ...ackEmail({ firstName, service }) });
+    ackSent = ack.ok ? 1 : 0;
+  }
+
+  await env.DB.prepare(
+    "INSERT INTO quote_requests (created_at, name, email, service, message, ip, country, owner_sent, ack_sent) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
+  ).bind(Date.now(), String(name).slice(0, 120), to, service, message.slice(0, 5000), ip, country, sent.ok ? 1 : 0, ackSent).run();
+
+  if (!sent.ok) {
+    return json({ error: "Failed to send. Please try again or email us directly." }, 500);
+  }
+  return json({ success: true });
+}
+
+async function sendEmail(env, payload) {
   try {
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
-      headers: {
-        "Authorization": `Bearer ${env.RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "ZulfiTech Website <onboarding@resend.dev>",
-        to: env.TO_EMAIL || "shaikgousebasha8008@gmail.com",
-        reply_to: email,
-        subject: `Quote request from ${String(name).replace(/[\r\n]+/g, " ").slice(0, 120)}`,
-        html: `<p><strong>Name:</strong> ${esc(name)}</p><p><strong>Email:</strong> ${esc(email)}</p><p><strong>Details:</strong></p><p>${esc(details).replace(/\n/g, "<br>")}</p>`,
-      }),
+      headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
     });
-
-    if (!res.ok) {
-      const errText = await res.text();
-      console.error("Resend error:", errText);
-      return new Response(JSON.stringify({ error: "Failed to send. Please try again or email us directly." }), { status: 500 });
-    }
-
-    return new Response(JSON.stringify({ success: true }), { status: 200 });
+    if (!res.ok) console.error("Resend error:", payload.from, res.status, await res.text());
+    return { ok: res.ok };
   } catch (err) {
-    console.error("Function error:", err);
-    return new Response(JSON.stringify({ error: "Failed to send. Please try again or email us directly." }), { status: 500 });
+    console.error("Resend fetch failed:", err);
+    return { ok: false };
   }
+}
+
+let quoteTableReady = false;
+async function ensureQuoteTable(env) {
+  if (quoteTableReady) return;
+  await env.DB.batch([
+    env.DB.prepare(`CREATE TABLE IF NOT EXISTS quote_requests (
+      id INTEGER PRIMARY KEY AUTOINCREMENT, created_at INTEGER NOT NULL, name TEXT, email TEXT, service TEXT,
+      message TEXT, ip TEXT, country TEXT, owner_sent INTEGER DEFAULT 0, ack_sent INTEGER DEFAULT 0)`),
+    env.DB.prepare("CREATE INDEX IF NOT EXISTS quote_requests_ip ON quote_requests (ip, created_at)"),
+    env.DB.prepare("CREATE INDEX IF NOT EXISTS quote_requests_email ON quote_requests (email, created_at)"),
+  ]);
+  quoteTableReady = true;
 }
 
 function json(data, status = 200, headers = {}) {
