@@ -5,6 +5,7 @@ import ThemeToggle from "./ThemeToggle.jsx";
 
 const links = [
   { href: "#services", label: "Solutions" },
+  { to: "/services", label: "Services" },
   { href: "#product", label: "ZulfiEra AI" },
   { href: "#showcase", label: "AI & Automation" },
   { href: "#offline", label: "Offline AI" },
@@ -22,9 +23,9 @@ export default function Header() {
           Zulfi<span className="accent">Tech</span>
         </a>
         <div className="nav-links">
-          {links.map((l) => (
-            <a key={l.href} href={l.href}>{l.label}</a>
-          ))}
+          {links.map((l) =>
+            l.to ? <Link key={l.to} to={l.to}>{l.label}</Link> : <a key={l.href} href={l.href}>{l.label}</a>,
+          )}
         </div>
         <div className="nav-actions">
           <ThemeToggle />
@@ -42,9 +43,11 @@ export default function Header() {
         </button>
       </nav>
       <div className={`nav-mobile${open ? " open" : ""}`}>
-        {links.map((l) => (
-          <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
-        ))}
+        {links.map((l) =>
+          l.to
+            ? <Link key={l.to} to={l.to} onClick={() => setOpen(false)}>{l.label}</Link>
+            : <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>,
+        )}
         <Link to="/login" onClick={() => setOpen(false)}>Client Login</Link>
         <a href="#contact" className="nav-cta" onClick={() => setOpen(false)}>Get in touch</a>
       </div>
