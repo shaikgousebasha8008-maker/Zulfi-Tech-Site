@@ -1202,3 +1202,10 @@ html[data-theme="light"] .hero-badges .badge-offline { color: #8A4F1E; backgroun
   .service-list.priced li { flex-direction: column; gap: 2px; }
   .svc-price { padding-left: 0; }
 }
+/* Services: name + one-line "what you get" + "Our app" tag */
+.service-list.priced li { padding-top: 9px; padding-bottom: 9px; }
+.service-list.priced li::before { top: 11px; }
+.svc-name b { font-weight: 600; color: #20242B; font-size: 14px; }
+.svc-tag { margin-left: 6px; padding: 1px 7px; border-radius: 999px; font-style: normal; font-size: 10.5px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; vertical-align: 1px; background: rgba(193,127,58,.14); color: #A8672C; }
+.svc-sub { display: block; margin-top: 2px; font-size: 12.5px; line-height: 1.5; color: #7A7E86; }

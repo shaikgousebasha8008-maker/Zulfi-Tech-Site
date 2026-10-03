@@ -18,12 +18,12 @@ const pillars = [
   {
     icon: "ai",
     title: "AI & SaaS Products",
-    desc: "Intelligent products and software platforms, from idea to launch. We build our own, like ZulfiEra AI, and we build them for clients.",
+    desc: "Use our ready-made AI today, or let us build AI into your business.",
     items: [
-      { name: "ZulfiEra AI, our AI assistant for teams", price: [349, 8], per: "user / mo" },
-      { name: "Custom AI assistants & agents on your data", price: [40000, 900] },
-      { name: "SaaS product design, engineering & launch", price: [150000, 3500] },
-      { name: "AI integration into existing apps & workflows", price: [30000, 700] },
+      { name: "ZulfiEra AI", tag: "Our app", sub: "Ready today. Your team signs up and uses our AI assistant.", price: [349, 8], per: "user / mo" },
+      { name: "Your own private AI assistant", sub: "Answers from your documents and policies, with agents for daily tasks.", price: [40000, 900] },
+      { name: "AI inside your existing software", sub: "We add AI to the apps you already use, like auto-replies or invoice reading.", price: [30000, 700] },
+      { name: "New SaaS product, built for you", sub: "From idea to launch: design, app, payments and admin dashboard.", price: [150000, 3500] },
     ],
     from: { price: [349, 8], per: "month" },
   },
@@ -32,10 +32,10 @@ const pillars = [
     title: "Cloud & Bare Metal",
     desc: "Secure, scalable infrastructure on Google Cloud, AWS, Cloudflare or dedicated hardware, sized to what you actually use and monitored around the clock.",
     items: [
-      { name: "Cloud architecture, migration & cost optimisation", price: [50000, 1200] },
-      { name: "Dedicated bare-metal servers & GPU hosting", price: null },
-      { name: "Kubernetes, Docker & CI/CD pipelines", price: [30000, 700] },
-      { name: "Security hardening, monitoring & backups", price: [25000, 600] },
+      { name: "Cloud setup & migration", sub: "Move to Google Cloud, AWS or Cloudflare and lower your monthly bill.", price: [50000, 1200] },
+      { name: "Bare-metal & GPU servers", sub: "Powerful dedicated machines for heavy apps and private AI.", price: null },
+      { name: "Kubernetes, Docker & CI/CD", sub: "Your code deploys automatically and safely, with one click.", price: [30000, 700] },
+      { name: "Security, monitoring & backups", sub: "Locked-down servers, live Grafana dashboards, alerts and daily backups.", price: [25000, 600] },
     ],
     from: { price: [25000, 600] },
   },
@@ -44,10 +44,10 @@ const pillars = [
     title: "Websites, Dashboards & Automation",
     desc: "The digital layer your customers and teams use every day: fast websites, clear dashboards, and automation that removes manual work.",
     items: [
-      { name: "Corporate websites & web applications", price: [15000, 350] },
-      { name: "Analytics dashboards & client portals", price: [40000, 900] },
-      { name: "Workflow automation & system integrations", price: [30000, 700] },
-      { name: "CRM setup, reporting & data pipelines", price: [35000, 800] },
+      { name: "Business websites & web apps", sub: "Fast, mobile-friendly sites like zulfi-tech.com.", price: [15000, 350] },
+      { name: "Dashboards & client portals", sub: "Live charts of your numbers, and logins for your customers.", price: [40000, 900] },
+      { name: "Workflow automation", sub: "Your tools connected, so repeated manual steps run by themselves.", price: [30000, 700] },
+      { name: "CRM, reports & data pipelines", sub: "Track every lead and get automatic weekly reports.", price: [35000, 800] },
     ],
     from: { price: [15000, 350] },
   },
@@ -105,7 +105,11 @@ export default function Services() {
               <ul className="service-list priced">
                 {s.items.map((item) => (
                   <li key={item.name}>
-                    <span className="svc-name">{item.name}</span>
+                    <span className="svc-name">
+                      <b>{item.name}</b>
+                      {item.tag && <em className="svc-tag">{item.tag}</em>}
+                      <span className="svc-sub">{item.sub}</span>
+                    </span>
                     <span className="svc-price">
                       {item.price ? (
                         <>
