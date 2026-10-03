@@ -4,6 +4,7 @@ import Privacy from "./pages/Privacy.jsx";
 import Terms from "./pages/Terms.jsx";
 import Login from "./pages/Login.jsx";
 import Portal from "./pages/Portal.jsx";
+import ServicesGuide from "./pages/ServicesGuide.jsx";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Route path="/terms" element={<Terms />} />
       <Route path="/login" element={<Login />} />
       <Route path="/portal" element={<Portal />} />
+      <Route path="/services" element={<ServicesGuide />} />
     </Routes>
   );
 }

@@ -16,6 +16,7 @@ export default function Footer() {
           <a href="#process">Approach</a>
           <a href="#case-studies">Our work</a>
           <a href="#faq">FAQ</a>
+          <Link to="/services">Services &amp; pricing</Link>
         </div>
         <div className="footer-col">
           <div className="footer-h">Company</div>

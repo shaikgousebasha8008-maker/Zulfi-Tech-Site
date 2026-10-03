@@ -1,80 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-
-const icons = {
-  ai: (
-    <svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3" /><path d="M9 1.5v3.5M15 1.5v3.5M9 19v3.5M15 19v3.5M1.5 9h3.5M1.5 15h3.5M19 9h3.5M19 15h3.5" /><path d="M12 8.5c.3 1.9 1.2 2.8 3.1 3.1-1.9.3-2.8 1.2-3.1 3.1-.3-1.9-1.2-2.8-3.1-3.1 1.9-.3 2.8-1.2 3.1-3.1z" /></svg>
-  ),
-  cloud: (
-    <svg viewBox="0 0 24 24"><path d="M7 11a4.5 4.5 0 0 1 8.7-1.6A3.5 3.5 0 1 1 17.5 16H7a2.5 2.5 0 0 1 0-5z" /><rect x="4" y="18.5" width="16" height="3.5" rx="1" /><path d="M7 20.25h.01M10 20.25h.01" /></svg>
-  ),
-  web: (
-    <svg viewBox="0 0 24 24"><rect x="2" y="3.5" width="20" height="15" rx="2.5" /><path d="M2 7.5h20M5 5.5h.01M7.5 5.5h.01" /><path d="M6 15l3.5-3.5 2.5 2.5L18 9" /><path d="M8 21.5h8" /></svg>
-  ),
-};
-
-// Starting prices: [INR, USD]. `per` marks monthly items; everything else is a one-time project price.
-// null = priced per quote (hardware varies too much for a fixed number).
-const pillars = [
-  {
-    icon: "ai",
-    title: "AI & SaaS Products",
-    desc: "Use our ready-made AI today, or let us build AI into your business.",
-    items: [
-      { name: "ZulfiEra AI", tag: "Our app", sub: "Ready today. Your team signs up and uses our AI assistant.", price: [349, 8], per: "user / mo" },
-      { name: "Your own private AI assistant", sub: "Answers from your documents and policies, with agents for daily tasks.", price: [40000, 900] },
-      { name: "AI inside your existing software", sub: "We add AI to the apps you already use, like auto-replies or invoice reading.", price: [30000, 700] },
-      { name: "New SaaS product, built for you", sub: "From idea to launch: design, app, payments and admin dashboard.", price: [150000, 3500] },
-    ],
-    from: { price: [349, 8], per: "month" },
-  },
-  {
-    icon: "cloud",
-    title: "Cloud & Bare Metal",
-    desc: "Secure, scalable infrastructure on Google Cloud, AWS, Cloudflare or dedicated hardware, sized to what you actually use and monitored around the clock.",
-    items: [
-      { name: "Cloud setup & migration", sub: "Move to Google Cloud, AWS or Cloudflare and lower your monthly bill.", price: [50000, 1200] },
-      { name: "Bare-metal & GPU servers", sub: "Powerful dedicated machines for heavy apps and private AI.", price: null },
-      { name: "Kubernetes, Docker & CI/CD", sub: "Your code deploys automatically and safely, with one click.", price: [30000, 700] },
-      { name: "Security, monitoring & backups", sub: "Locked-down servers, live Grafana dashboards, alerts and daily backups.", price: [25000, 600] },
-    ],
-    from: { price: [25000, 600] },
-  },
-  {
-    icon: "web",
-    title: "Websites, Dashboards & Automation",
-    desc: "The digital layer your customers and teams use every day: fast websites, clear dashboards, and automation that removes manual work.",
-    items: [
-      { name: "Business websites & web apps", sub: "Fast, mobile-friendly sites like zulfi-tech.com.", price: [15000, 350] },
-      { name: "Dashboards & client portals", sub: "Live charts of your numbers, and logins for your customers.", price: [40000, 900] },
-      { name: "Workflow automation", sub: "Your tools connected, so repeated manual steps run by themselves.", price: [30000, 700] },
-      { name: "CRM, reports & data pipelines", sub: "Track every lead and get automatic weekly reports.", price: [35000, 800] },
-    ],
-    from: { price: [15000, 350] },
-  },
-];
-
-const money = (price, cur) =>
-  cur === "INR" ? `₹${price[0].toLocaleString("en-IN")}` : `$${price[1].toLocaleString("en-US")}`;
-
-// First guess from the browser's time zone (no flicker for most visitors), then confirm with Cloudflare.
-function useCurrency() {
-  const [cur, setCur] = useState(() => {
-    try {
-      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
-      return /Kolkata|Calcutta/.test(tz) ? "INR" : "USD";
-    } catch {
-      return "USD";
-    }
-  });
-  const picked = useRef(false);
-  useEffect(() => {
-    fetch("/api/geo")
-      .then((r) => (r.ok ? r.json() : null))
-      .then((g) => { if (g?.country && !picked.current) setCur(g.country === "IN" ? "INR" : "USD"); })
-      .catch(() => {});
-  }, []);
-  return [cur, (c) => { picked.current = true; setCur(c); }];
-}
+import { Link } from "react-router-dom";
+import { icons } from "./ServiceIcons.jsx";
+import { pillars, money } from "../data/services.js";
+import { useCurrency } from "../useCurrency.js";
 
 export default function Services() {
   const [cur, setCur] = useCurrency();
@@ -140,6 +67,9 @@ export default function Services() {
           Starting prices for a typical project. You get an exact, fixed quote after a free 30-minute call.{" "}
           {cur === "INR" ? "GST (18%) extra." : "Local taxes may apply."} Monthly support plans are available for everything we build.
         </p>
+        <div className="svc-guide-link reveal">
+          <Link to="/services" className="btn-ghost-dark">Read the full services guide →</Link>
+        </div>
       </div>
     </section>
   );
