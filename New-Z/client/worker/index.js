@@ -14,6 +14,10 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    // Visitor's country (from Cloudflare) so the services section shows ₹ in India and $ elsewhere.
+    if (url.pathname === "/api/geo" && request.method === "GET") {
+      return json({ country: request.cf?.country || null }, 200, { "Cache-Control": "private, max-age=3600" });
+    }
     if (url.pathname === "/api/quote" && request.method === "POST") {
       return handleQuote(request, env);
     }
