@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo, { BrandName } from "./Logo.jsx";
+import { BrandName } from "./Logo.jsx";
 import ThemeToggle from "./ThemeToggle.jsx";
 
 const links = [
@@ -19,7 +19,6 @@ export default function Header() {
     <header className="site-header">
       <nav>
         <a href="#top" className="brand">
-          <Logo variant="onDark" className="brand-mark" />
           <BrandName />
         </a>
         <div className="nav-links">

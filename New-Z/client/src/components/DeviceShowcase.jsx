@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import Logo, { BrandName } from "./Logo.jsx";
+import { BrandName } from "./Logo.jsx";
 
 // "See it in action": a MacBook mock-up running a macOS-style "ZulfiTech Studio" window,
 // with tabs for the product work we build. All figures on the screens are sample data.
@@ -406,7 +406,7 @@ export default function DeviceShowcase() {
                   </div>
                   <div className="mx-body">
                     <nav className="mx-nav">
-                      <div className="mx-brand"><Logo variant="onLight" className="mx-brand-mark" /><b><BrandName /></b></div>
+                      <div className="mx-brand"><b><BrandName /></b></div>
                       {tabs.map((t, i) => t.terminal ? null : (
                         <span key={t.key} className={i === active ? "on" : ""}><em>{navIcons[t.key]}</em>{t.nav}</span>
                       ))}

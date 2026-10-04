@@ -18,6 +18,11 @@
     </script>
   </head>
   <body>
+    <!-- Brand glyph "Blade Z" (first letter of the name). Colours follow the theme via --bz-blade / --bz-spark. -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+      <linearGradient id="bzg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7D79C"/><stop offset=".55" stop-color="#E0A04F"/><stop offset="1" stop-color="#A9622A"/></linearGradient>
+      <symbol id="bz" viewBox="44 22 118 130"><rect x="52" y="56" width="74" height="16" rx="5" fill="url(#bzg)"/><rect x="74" y="128" width="74" height="16" rx="5" fill="url(#bzg)"/><path d="M50 146 L64 150 L152 50 Z" style="fill:var(--bz-blade,#E3E6EB)"/><path transform="translate(153 43) scale(19)" style="fill:var(--bz-spark,#F3CF8F)" d="M0-1C.07-.34.28-.1.6 0 .28.1.07.34 0 1-.07.34-.28.1-.6 0-.28-.1-.07-.34 0-1Z"/></symbol>
+    </defs></svg>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

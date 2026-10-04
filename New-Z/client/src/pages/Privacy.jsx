@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo, { BrandName } from "../components/Logo.jsx";
+import { BrandName } from "../components/Logo.jsx";
 
 export default function Privacy() {
   return (
@@ -7,7 +7,6 @@ export default function Privacy() {
       <header className="site-header">
         <nav>
           <Link to="/" className="brand">
-            <Logo variant="onDark" className="brand-mark" />
             <BrandName />
           </Link>
         </nav>

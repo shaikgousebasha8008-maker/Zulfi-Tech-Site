@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Logo, { BrandName } from "../components/Logo.jsx";
+import { BrandName } from "../components/Logo.jsx";
 
 export default function Portal() {
   const navigate = useNavigate();
@@ -44,7 +44,6 @@ export default function Portal() {
       <header className="site-header">
         <nav>
           <Link to="/" className="brand">
-            <Logo variant="onDark" className="brand-mark" />
             <BrandName />
           </Link>
           <button className="nav-cta" onClick={handleLogout}>Sign out</button>
