@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "./Logo.jsx";
+import Logo, { BrandName } from "./Logo.jsx";
 import ThemeToggle from "./ThemeToggle.jsx";
 
 const links = [
@@ -20,7 +20,7 @@ export default function Header() {
       <nav>
         <a href="#top" className="brand">
           <Logo variant="onDark" className="brand-mark" />
-          Zulfi<span className="accent">Tech</span>
+          <BrandName />
         </a>
         <div className="nav-links">
           {links.map((l) =>

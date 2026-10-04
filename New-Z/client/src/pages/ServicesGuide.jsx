@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../components/Logo.jsx";
+import Logo, { BrandName } from "../components/Logo.jsx";
 import ThemeToggle from "../components/ThemeToggle.jsx";
 import { icons } from "../components/ServiceIcons.jsx";
 import { products, pillars, supportPlans, steps, safety, faqs, money } from "../data/services.js";
@@ -60,7 +60,7 @@ export default function ServicesGuide() {
       <header className="sg-bar">
         <Link to="/" className="brand">
           <Logo variant="onDark" className="brand-mark" />
-          Zulfi<span className="accent">Tech</span>
+          <BrandName />
         </Link>
         <div className="sg-bar-right">
           <div className="sg-cur" role="radiogroup" aria-label="Currency">

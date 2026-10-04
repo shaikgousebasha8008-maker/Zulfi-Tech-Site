@@ -2,7 +2,8 @@
 // in Gmail, Outlook and Apple Mail (email clients ignore <style> sheets and block SVG).
 
 const SITE = "https://zulfi-tech.com";
-const LOGO = `${SITE}/email/logo.png`; // the Zulfiqar emblem, 192px PNG on graphite
+const LOGO = `${SITE}/email/logo.png`; // the Blade Z mark, 192px PNG on graphite
+const WORDMARK_IMG = `${SITE}/email/wordmark.png`; // the name with the sparkle over the i, 560x120 transparent PNG
 const C = { graphite: "#14171D", cream: "#F5F3EF", ink: "#20242B", muted: "#6B6F77", bronze: "#C17F3A", line: "#E4E1DA", tint: "#FBF7F1", tintLine: "#F0E3D2" };
 const SERIF = "Georgia, 'Times New Roman', serif";
 const SANS = "-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif";
@@ -23,7 +24,7 @@ function layout({ title, preheader, body }) {
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;border-radius:18px;overflow:hidden;background:#ffffff;border:1px solid ${C.line}">
       <tr><td style="background:${C.graphite};padding:28px 24px 24px;text-align:center;border-bottom:3px solid ${C.bronze}">
         <img src="${LOGO}" width="60" height="60" alt="ZulfiTech" style="display:inline-block;border:0;border-radius:14px" />
-        <div style="margin-top:10px;font-family:${SERIF};font-size:25px;font-weight:700;color:${C.cream};letter-spacing:0.3px">${WORDMARK}</div>
+        <div style="margin-top:10px"><img src="${WORDMARK_IMG}" width="196" height="42" alt="ZulfiTech" style="display:inline-block;border:0" /></div>
         <div style="margin-top:4px;font-family:${SANS};font-size:12px;letter-spacing:2px;color:#A9ADB5">AI · CLOUD · AUTOMATION</div>
       </td></tr>
       <tr><td style="padding:30px 28px 10px;font-family:${SANS};color:${C.ink}">${body}</td></tr>

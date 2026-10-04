@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import Logo from "./Logo.jsx";
+import Logo, { BrandName } from "./Logo.jsx";
 
 // "See it in action": a MacBook mock-up running a macOS-style "ZulfiTech Studio" window,
 // with tabs for the product work we build. All figures on the screens are sample data.
@@ -9,7 +9,7 @@ const STAGE_H = 600;
 
 function Spark({ size = 18 }) {
   // ZulfiEra AI mark: the Zulfiqar over a Z monogram.
-  return <img src="/zulfiera-mark.svg" width={size} height={size} alt="" aria-hidden="true" style={{ flexShrink: 0 }} />;
+  return <img src="/zulfiera-mark.svg?v=6" width={size} height={size} alt="" aria-hidden="true" style={{ flexShrink: 0 }} />;
 }
 
 /* ---------- AI Assistant ---------- */
@@ -406,7 +406,7 @@ export default function DeviceShowcase() {
                   </div>
                   <div className="mx-body">
                     <nav className="mx-nav">
-                      <div className="mx-brand"><Logo variant="onLight" className="mx-brand-mark" /><b>Zulfi<span>Tech</span></b></div>
+                      <div className="mx-brand"><Logo variant="onLight" className="mx-brand-mark" /><b><BrandName /></b></div>
                       {tabs.map((t, i) => t.terminal ? null : (
                         <span key={t.key} className={i === active ? "on" : ""}><em>{navIcons[t.key]}</em>{t.nav}</span>
                       ))}

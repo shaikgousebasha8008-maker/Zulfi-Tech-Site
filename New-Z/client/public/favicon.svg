@@ -1,16 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="ZulfiEra AI">
-  <!-- ZulfiEra AI mark (small sizes): the Zulfiqar over a Z monogram in a gold ring. Full emblem: logo-dark.svg. -->
+  <!-- ZulfiEra / ZulfiTech mark "Blade Z": a Z whose diagonal is a straight blade (the Zulfiqar), with a glint at the tip (AI). -->
   <defs>
-    <linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FCE3AA"/><stop offset=".5" stop-color="#E0A04F"/><stop offset="1" stop-color="#9C5522"/></linearGradient>
-    <linearGradient id="ms" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#B7BCC5"/><stop offset=".5" stop-color="#FFFFFF"/><stop offset="1" stop-color="#C8CCD4"/></linearGradient>
-    <radialGradient id="md" cx=".5" cy=".38" r=".7"><stop offset="0" stop-color="#2A2F38"/><stop offset="1" stop-color="#101216"/></radialGradient>
+    <linearGradient id="zt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#262B35"/><stop offset="1" stop-color="#0F1115"/></linearGradient>
+    <linearGradient id="zg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7D79C"/><stop offset=".55" stop-color="#E0A04F"/><stop offset="1" stop-color="#A9622A"/></linearGradient>
+    <linearGradient id="zs" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#AEB4BE"/><stop offset=".6" stop-color="#F4F5F7"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
   </defs>
-  <circle cx="100" cy="100" r="96" fill="url(#md)"/>
-  <circle cx="100" cy="100" r="91" fill="none" stroke="url(#mg)" stroke-width="10"/>
-  <path d="M58 62 H142 L142 76 L82 124 H142 V138 H58 V124 L118 76 H58 Z" fill="url(#mg)" stroke="#14171D" stroke-width="4" stroke-linejoin="round" paint-order="stroke"/>
-  <g stroke="#14171D" stroke-width="4" stroke-linejoin="round" paint-order="stroke">
-    <path d="M91 146 L90 58 L87 22 L100 48 L113 22 L110 58 L109 146 Z" fill="url(#ms)"/>
-    <path d="M66 144 Q100 164 134 144 L134 153 Q100 173 66 153 Z" fill="url(#mg)"/>
-    <circle cx="100" cy="175" r="9" fill="url(#mg)"/>
-  </g>
+  <rect width="200" height="200" rx="46" fill="url(#zt)"/>
+  <rect x="52" y="56" width="74" height="16" rx="5" fill="url(#zg)"/>
+  <rect x="74" y="128" width="74" height="16" rx="5" fill="url(#zg)"/>
+  <path d="M50 146 L64 150 L152 50 Z" fill="url(#zs)"/>
+  <path transform="translate(153 43) scale(19)" fill="#FFF4DD" d="M0-1C.07-.34.28-.1.6 0 .28.1.07.34 0 1-.07.34-.28.1-.6 0-.28-.1-.07-.34 0-1Z"/>
 </svg>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Logo from "../components/Logo.jsx";
+import Logo, { BrandName } from "../components/Logo.jsx";
 import ThemeToggle from "../components/ThemeToggle.jsx";
 
 const perks = [
@@ -43,7 +43,7 @@ export default function Login() {
       <aside className="lg-brand">
         <Link to="/" className="brand lg-logo">
           <Logo variant="onDark" className="brand-mark" />
-          Zulfi<span className="accent">Tech</span>
+          <BrandName />
         </Link>
         <div className="lg-brand-body">
           <div className="eyebrow-mark"><span className="txt">Client portal</span></div>
