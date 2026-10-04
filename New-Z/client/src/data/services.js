@@ -19,7 +19,7 @@ export const products = [
     link: { href: "https://ai.zulfi-tech.com", label: "Open ZulfiEra AI" },
     what: "A fast, private AI assistant for chat, coding, documents, images and research. It runs on leading open AI models, chosen and tested for speed and accuracy.",
     features: [
-      "Three answer depths: Flash (~3 s), Pro (~7 s) and Deep Research (10–15 s)",
+      "Three answer depths: Swift (~3 s), Sharp (~7 s) and Deep Dive (10–15 s)",
       "Reads photos, PDFs, Word files and spreadsheets",
       "Creates and edits images",
       "Voice input and sketch-to-answer",
@@ -85,7 +85,7 @@ export const pillars = [
         per: "user / mo",
         what: "Your team uses our ready-made AI assistant at ai.zulfi-tech.com. No setup, no project, just sign up.",
         who: "Individuals, students and small teams.",
-        gets: ["Plus or Pro plan for each person", "Flash, Pro and Deep Research answers", "File and photo reading, image creation"],
+        gets: ["Plus or Pro plan for each person", "Swift, Sharp and Deep Dive answers", "File and photo reading, image creation"],
         need: ["Each person's email address"],
         time: "Instant",
       },

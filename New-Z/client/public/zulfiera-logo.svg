@@ -2,7 +2,7 @@
   <!-- ZulfiEra / ZulfiTech mark "Blade Z": a Z whose diagonal is a straight blade (the Zulfiqar), with a glint at the tip (AI). -->
   <defs>
     <linearGradient id="zt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#262B35"/><stop offset="1" stop-color="#0F1115"/></linearGradient>
-    <linearGradient id="zg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7D79C"/><stop offset=".55" stop-color="#E0A04F"/><stop offset="1" stop-color="#A9622A"/></linearGradient>
+    <linearGradient id="zg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F0B35A"/><stop offset=".55" stop-color="#D2862F"/><stop offset="1" stop-color="#9C5418"/></linearGradient>
     <linearGradient id="zs" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#AEB4BE"/><stop offset=".6" stop-color="#F4F5F7"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
   </defs>
   <rect width="200" height="200" rx="46" fill="url(#zt)"/>
