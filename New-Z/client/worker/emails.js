@@ -2,7 +2,7 @@
 // in Gmail, Outlook and Apple Mail (email clients ignore <style> sheets and block SVG).
 
 const SITE = "https://zulfi-tech.com";
-const WORDMARK_IMG = `${SITE}/email/wordmark.png`; // the name with the blade Z as its first letter, 600x130 transparent PNG
+const WORDMARK_IMG = `${SITE}/email/wordmark.png`; // the name with the blade Z as its first letter, 600x150 transparent PNG
 const C = { graphite: "#14171D", cream: "#F5F3EF", ink: "#20242B", muted: "#6B6F77", bronze: "#C17F3A", line: "#E4E1DA", tint: "#FBF7F1", tintLine: "#F0E3D2" };
 const SERIF = "Georgia, 'Times New Roman', serif";
 const SANS = "-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif";
@@ -21,7 +21,7 @@ function layout({ title, preheader, body }) {
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${C.cream};padding:32px 12px"><tr><td align="center">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;border-radius:18px;overflow:hidden;background:#ffffff;border:1px solid ${C.line}">
       <tr><td style="background:${C.graphite};padding:28px 24px 24px;text-align:center;border-bottom:3px solid ${C.bronze}">
-        <img src="${WORDMARK_IMG}" width="240" height="52" alt="ZulfiTech" style="display:inline-block;border:0" />
+        <img src="${WORDMARK_IMG}" width="240" height="60" alt="ZulfiTech" style="display:inline-block;border:0" />
         <div style="margin-top:4px;font-family:${SANS};font-size:12px;letter-spacing:2px;color:#A9ADB5">AI · CLOUD · AUTOMATION</div>
       </td></tr>
       <tr><td style="padding:30px 28px 10px;font-family:${SANS};color:${C.ink}">${body}</td></tr>
