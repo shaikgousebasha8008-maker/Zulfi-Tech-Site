@@ -1456,8 +1456,8 @@ html[data-theme="light"] .zi::after { background: #C17F3A; }
 html[data-theme="light"] .brand-mark, html[data-theme="light"] .logo-lockup .logo-mark { box-shadow: 0 4px 12px rgba(20,23,29,.18); }
 
 /* ---------- Brand v4: blade Z is the first letter of the name, no tile ---------- */
-:root { --bz-blade: #E3E6EB; --bz-spark: #F3CF8F; }
-html[data-theme="light"] { --bz-blade: #5A616D; --bz-spark: #C17F3A; }
+:root { --bz-blade: #E3E6EB; --bz-spark: #EDB25A; }
+html[data-theme="light"] { --bz-blade: #5A616D; --bz-spark: #C98A2E; }
 .bz { display: inline-block; width: 1.044em; height: 1.223em; position: relative; top: 0.228em; margin-right: 0.01em; vertical-align: baseline; overflow: visible; }
 .bz-solo { display: block; width: 60px; height: 70px; overflow: visible; }
 .brand .zw, .sg-bar .brand .zw { font-size: 24px; }
