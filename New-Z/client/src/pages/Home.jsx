@@ -14,9 +14,11 @@ import Footer from "../components/Footer.jsx";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import useReveal from "../useReveal.js";
+import useTilt from "../useTilt.js";
 
 export default function Home() {
   const containerRef = useReveal();
+  useTilt(containerRef);
   const { hash } = useLocation();
 
   // Arriving from another page with a #section (e.g. /#contact from the services guide): scroll to it.

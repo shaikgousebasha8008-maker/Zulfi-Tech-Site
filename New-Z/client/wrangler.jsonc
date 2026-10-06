@@ -2,6 +2,9 @@
   "name": "zulfi-tech-site",
   "compatibility_date": "2026-01-01",
   "main": "worker/index.js",
+  // Test links (preview URLs on workers.dev) for checking a new design before it goes live.
+  "workers_dev": true,
+  "preview_urls": true,
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",

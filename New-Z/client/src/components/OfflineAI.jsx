@@ -21,8 +21,8 @@ function Diagram() {
     <div className="oa-diagram">
       <svg viewBox="0 0 1000 532" role="img" aria-label="Field team devices connect over local Wi-Fi to a ZulfiEra Edge server on site that works fully offline. An optional satellite link carries encrypted sync to the ZulfiTech cloud.">
         <defs>
-          <radialGradient id="oaGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stopColor="#E0A868" stopOpacity=".35" /><stop offset="1" stopColor="#E0A868" stopOpacity="0" /></radialGradient>
-          <linearGradient id="oaGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#F8D596" /><stop offset="1" stopColor="#C17F3A" /></linearGradient>
+          <radialGradient id="oaGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stopColor="#F2B233" stopOpacity=".35" /><stop offset="1" stopColor="#F2B233" stopOpacity="0" /></radialGradient>
+          <linearGradient id="oaGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#FFE7A3" /><stop offset="1" stopColor="#D99A24" /></linearGradient>
         </defs>
 
         {/* stars */}
