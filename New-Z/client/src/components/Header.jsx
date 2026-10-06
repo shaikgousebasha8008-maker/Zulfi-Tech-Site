@@ -6,7 +6,7 @@ import ThemeToggle from "./ThemeToggle.jsx";
 const links = [
   { href: "#services", label: "Solutions" },
   { to: "/services", label: "Services" },
-  { href: "#product", label: "ZulfiEra AI" },
+  { href: "#product", label: "ZulfiEra Ai" },
   { href: "#showcase", label: "AI & Automation" },
   { href: "#offline", label: "Offline AI" },
   { href: "#faq", label: "FAQ" },

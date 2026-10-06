@@ -1,7 +1,7 @@
 const cases = [
   {
     tag: "AI & SaaS",
-    title: "Launching ZulfiEra AI, a full AI assistant, on serverless infrastructure",
+    title: "Launching ZulfiEra Ai, a full AI assistant, on serverless infrastructure",
     desc: "Designed and shipped our own AI assistant with chat, document and image understanding, image creation, voice input, secure sign-in and usage-based plans, running on open AI models with automatic failover between providers.",
   },
   {

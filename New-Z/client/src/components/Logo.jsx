@@ -1,4 +1,4 @@
-// Brand mark shared by ZulfiTech and ZulfiEra AI: the six-petal swirl (violet, gold and electric blue)
+// Brand mark shared by ZulfiTech and ZulfiEra Ai: the six-petal swirl (violet, gold and electric blue)
 // with a gold AI spark at its centre. Drawn from the #zm symbol in index.html.
 const Glyph = ({ className = "zm" }) => (
   <svg className={className} aria-hidden="true" focusable="false"><use href="#zm" /></svg>

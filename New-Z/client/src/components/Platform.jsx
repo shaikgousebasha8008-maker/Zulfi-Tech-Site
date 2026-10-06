@@ -1,6 +1,6 @@
 import ArchitectureDiagram from "./ArchitectureDiagram.jsx";
 
-// Suggestion cards copied from the real ZulfiEra AI welcome screen (ai.zulfi-tech.com).
+// Suggestion cards copied from the real ZulfiEra Ai welcome screen (ai.zulfi-tech.com).
 const suggestions = [
   { cls: "ic-image", title: "Create an image", sub: "Logos, posters, photo edits", svg: <><rect x="3" y="3" width="18" height="18" rx="4" /><circle cx="9" cy="9" r="1.8" /><path d="m21 15-4.5-4.5L6 21" /></> },
   { cls: "ic-mail", title: "Write a pro email", sub: "Replies, updates, tickets", svg: <><rect x="3" y="5" width="18" height="14" rx="3" /><path d="m4 7 8 6 8-6" /></> },
@@ -34,7 +34,7 @@ function AppPreview() {
         </aside>
         <div className="zp-main">
           <img src="/zulfiera-mark.svg?v=7" alt="" className="zp-logo" />
-          <p className="zp-eyebrow">Zulfi<span>Era AI</span></p>
+          <p className="zp-eyebrow">Zulfi<span>Era Ai</span></p>
           <h4>What can I help you with<span>?</span></h4>
           <div className="zp-sugg">
             {suggestions.map((s) => (
@@ -69,7 +69,7 @@ export default function Platform() {
           <div className="platform-panel zp-panel reveal">
             <div className="pp-head">
               <img src="/zulfiera-mark.svg?v=7" alt="" className="pp-logo" />
-              <div><h3>Zulfi<span className="gold">Era AI</span></h3><small>AI assistant · web, iPhone and Android</small></div>
+              <div><h3>Zulfi<span className="gold">Era Ai</span></h3><small>AI assistant · web, iPhone and Android</small></div>
               <span className="pp-live"><i></i>Live</span>
             </div>
             <p>Our own AI assistant: a sharp, friendly expert for infrastructure, code, business writing and everyday questions. Free to try, with Premium plans for teams.</p>
@@ -78,7 +78,7 @@ export default function Platform() {
               {features.map((f) => <span key={f.text}><em aria-hidden="true">✓</em>{f.text}</span>)}
             </div>
             <div className="pp-ctas">
-              <a href="https://ai.zulfi-tech.com" className="btn-primary" target="_blank" rel="noreferrer">Try ZulfiEra AI free</a>
+              <a href="https://ai.zulfi-tech.com" className="btn-primary" target="_blank" rel="noreferrer">Try ZulfiEra Ai free</a>
               <span className="pp-note">No card needed · sign in with Google or email</span>
             </div>
           </div>

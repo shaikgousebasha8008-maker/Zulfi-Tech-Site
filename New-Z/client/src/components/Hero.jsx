@@ -4,7 +4,7 @@ import SolarSwirl from "./SolarSwirl.jsx";
 // Hero visual: a live-looking "AI agent" console that works through an automation,
 // with floating cards for the AI model and the infrastructure it runs on. Sample data.
 const steps = [
-  { title: "Read enquiry and classify", sub: "ZulfiEra AI · private model" },
+  { title: "Read enquiry and classify", sub: "ZulfiEra Ai · private model" },
   { title: "Provision cloud workspace", sub: "Terraform · AWS + bare-metal" },
   { title: "Deploy dashboard and portal", sub: "Kubernetes · 6/6 pods ready" },
   { title: "Notify team and client", sub: "Slack · email summary" },
@@ -83,7 +83,7 @@ export default function Hero() {
           </p>
           <div className="hero-ctas">
             <a href="#services" className="btn-primary">Explore solutions</a>
-            <a href="https://ai.zulfi-tech.com" className="btn-secondary" target="_blank" rel="noreferrer">Try ZulfiEra AI</a>
+            <a href="https://ai.zulfi-tech.com" className="btn-secondary" target="_blank" rel="noreferrer">Try ZulfiEra Ai</a>
           </div>
           <div className="hero-badges">
             <span>AI &amp; LLM products</span>

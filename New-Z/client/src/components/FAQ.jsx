@@ -3,7 +3,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: "What does ZulfiTech do?",
-    a: "We work across three practices: AI and SaaS products (including our own assistant, ZulfiEra AI), cloud and bare-metal infrastructure, and websites, dashboards and automation. Many clients use us for more than one, with a single team across all of it.",
+    a: "We work across three practices: AI and SaaS products (including our own assistant, ZulfiEra Ai), cloud and bare-metal infrastructure, and websites, dashboards and automation. Many clients use us for more than one, with a single team across all of it.",
   },
   {
     q: "Can you build a custom AI assistant for our company?",

@@ -4,10 +4,9 @@ import { useEffect } from "react";
 // and a soft glare follows the pointer. Each target gets the class "tilt3d" plus CSS variables
 // --rx / --ry (tilt, degrees) and --gx / --gy (glare position, %) that index.css turns into the effect.
 // Off for touch-only devices and for people who prefer reduced motion (the cards still look 3D at rest).
-const TARGETS = [
-  ".macbook", ".ad-wrap", ".oa-diagram", ".platform-panel", ".service-card", ".process-item", ".hv-console",
-  ".case-card", ".ci-card", ".quote-card", ".why-item", ".pricing-box", ".faq-item",
-].join(", ");
+// Only the main visuals are 3D: the AI & automation showcase window, the ZulfiEra Ai and Cloud
+// Infrastructure panels (with the architecture diagram), the satellite view and the hero console.
+const TARGETS = [".macbook", ".platform-panel", ".ad-wrap", ".oa-diagram", ".hv-console"].join(", ");
 
 export default function useTilt(rootRef, max = 7) {
   useEffect(() => {

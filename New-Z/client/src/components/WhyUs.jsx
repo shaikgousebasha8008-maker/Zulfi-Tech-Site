@@ -2,7 +2,7 @@ const points = [
   {
     idx: "01",
     title: "We run what we build",
-    desc: "Our own products, including ZulfiEra AI, run on the same cloud and automation stack we deliver. You get engineering proven in production, not theory.",
+    desc: "Our own products, including ZulfiEra Ai, run on the same cloud and automation stack we deliver. You get engineering proven in production, not theory.",
   },
   {
     idx: "02",

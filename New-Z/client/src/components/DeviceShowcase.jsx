@@ -8,7 +8,7 @@ const STAGE_W = 960; // the screen is designed at 960 x 600 and scaled to fit
 const STAGE_H = 600;
 
 function Spark({ size = 18 }) {
-  // ZulfiEra AI mark: the Zulfiqar over a Z monogram.
+  // ZulfiEra Ai mark: the Zulfiqar over a Z monogram.
   return <img src="/zulfiera-mark.svg?v=6" width={size} height={size} alt="" aria-hidden="true" style={{ flexShrink: 0 }} />;
 }
 
@@ -19,7 +19,7 @@ function AssistantScreen() {
       <div className="mx-main mx-chat">
         <div className="mx-head">
           <strong>Server report review</strong>
-          <span className="mx-pill">ZulfiEra AI · open models</span>
+          <span className="mx-pill">ZulfiEra Ai · open models</span>
         </div>
         <div className="mx-msgs">
           <div className="mx-b user">Summarise today's server report and flag anything urgent.</div>
@@ -296,7 +296,7 @@ const tabs = [
     label: "AI Assistant",
     nav: "Assistant",
     title: "AI that works alongside your team",
-    desc: "ZulfiEra AI and custom assistants read your documents and screenshots, answer questions, draft replies and tickets, and connect to the tools you already use.",
+    desc: "ZulfiEra Ai and custom assistants read your documents and screenshots, answer questions, draft replies and tickets, and connect to the tools you already use.",
     points: ["Assistants trained on your documents", "Secure sign-in, plans and admin controls", "Runs on cloud or your own servers"],
     Screen: AssistantScreen,
   },

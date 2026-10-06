@@ -10,13 +10,13 @@ export const money = (price, cur) =>
 export const products = [
   {
     id: "zulfiera-ai",
-    name: "ZulfiEra AI",
+    name: "ZulfiEra Ai",
     status: "Live",
     tagline: "Our AI assistant for people and teams.",
     price: [349, 8],
     per: "user / month",
     priceNote: "Free plan available",
-    link: { href: "https://ai.zulfi-tech.com", label: "Open ZulfiEra AI" },
+    link: { href: "https://ai.zulfi-tech.com", label: "Open ZulfiEra Ai" },
     what: "A fast, private AI assistant for chat, coding, documents, images and research. It runs on leading open AI models, chosen and tested for speed and accuracy.",
     features: [
       "Three answer depths: Swift (~3 s), Sharp (~7 s) and Deep Dive (10–15 s)",
@@ -62,7 +62,7 @@ export const products = [
       "Runs on a standard PC, a server or a GPU machine",
       "For offices, factories, ships, defence and remote sites",
       "One-time setup with optional yearly support",
-      "Same easy chat interface as ZulfiEra AI",
+      "Same easy chat interface as ZulfiEra Ai",
     ],
   },
 ];
@@ -78,7 +78,7 @@ export const pillars = [
     items: [
       {
         id: "zulfiera-teams",
-        name: "ZulfiEra AI",
+        name: "ZulfiEra Ai",
         tag: "Our app",
         sub: "Ready today. Your team signs up and uses our AI assistant.",
         price: [349, 8],
@@ -119,7 +119,7 @@ export const pillars = [
         name: "New SaaS product, built for you",
         sub: "From idea to launch: design, app, payments and admin dashboard.",
         price: [150000, 3500],
-        what: "We design, build and launch a complete software product for you: sign-in, database, payments and an admin dashboard. The same way we built ZulfiEra AI.",
+        what: "We design, build and launch a complete software product for you: sign-in, database, payments and an admin dashboard. The same way we built ZulfiEra Ai.",
         who: "Founders and businesses with a product idea.",
         gets: ["Product design and a working web app", "Hosting set up and secured", "Admin dashboard and launch support"],
         need: ["Your idea on 1–2 pages", "Who the users are and the must-have features for version 1", "Your brand: logo and colours"],
@@ -266,8 +266,8 @@ export const safety = [
 
 export const faqs = [
   { q: "Why do you show “from” prices?", a: "Every business is different. The “from” price is a typical small project. You always get a fixed, written quote before any work starts, so there are no surprises." },
-  { q: "Is GST included?", a: "For project work, 18% GST is added for clients in India. ZulfiEra AI subscription prices already include GST." },
-  { q: "Who owns the code you build?", a: "You do, once the project is paid in full. Our own products, such as ZulfiEra AI, remain ours." },
+  { q: "Is GST included?", a: "For project work, 18% GST is added for clients in India. ZulfiEra Ai subscription prices already include GST." },
+  { q: "Who owns the code you build?", a: "You do, once the project is paid in full. Our own products, such as ZulfiEra Ai, remain ours." },
   { q: "How do you keep my data safe?", a: "We use the least access needed, keep every password encrypted, log every change, and you can remove our access at any time." },
   { q: "Can your AI work without the internet?", a: "Yes. ZulfiEra Offline AI runs fully inside your office or on your own server, with no internet connection." },
   { q: "Do you add a markup to cloud bills?", a: "No. You pay Google, AWS or Cloudflare directly. We only charge for our work." },

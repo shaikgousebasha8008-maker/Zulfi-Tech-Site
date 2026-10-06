@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="footer-col">
           <div className="footer-h">Site</div>
           <a href="#services">Solutions</a>
-          <a href="#product">ZulfiEra AI</a>
+          <a href="#product">ZulfiEra Ai</a>
           <a href="#process">Approach</a>
           <a href="#case-studies">Our work</a>
           <a href="#faq">FAQ</a>
@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="footer-col">
           <div className="footer-h">Company</div>
           <a href="mailto:info@zulfi-tech.com">info@zulfi-tech.com</a>
-          <a href="https://ai.zulfi-tech.com" target="_blank" rel="noreferrer">ZulfiEra AI</a>
+          <a href="https://ai.zulfi-tech.com" target="_blank" rel="noreferrer">ZulfiEra Ai</a>
           <Link to="/login">Client Login</Link>
           <Link to="/privacy">Privacy Policy</Link>
           <Link to="/terms">Terms of Service</Link>
