@@ -1727,3 +1727,9 @@ html:not([data-theme="light"]) .svc-from { color: #F4F1FF; background: linear-gr
 html:not([data-theme="light"]) .svc-from small { -webkit-text-fill-color: #B9B1DA; }
 html:not([data-theme="light"]) .svc-from-label { color: #B9B1DA; }
 html[data-theme="light"] .svc-from { color: #1E1145; }
+/* Cards are 3D at rest (not only on hover): a resting backward tilt so the raised edge, depth and floating content always show */
+:is(.service-card, .process-item, .case-card, .ci-card, .why-item, .pricing-box).tilt3d { --rx0: 7deg; --tz0: 0px; transform-origin: 50% 100%; }
+:is(.platform-panel, .quote-card).tilt3d { --rx0: 4deg; transform-origin: 50% 100%; }
+.faq-item.tilt3d { --rx0: 3deg; transform-origin: 50% 100%; }
+.service-grid, .process-grid, .case-grid, .ci-cards, .platform-grid { perspective: 1400px; }
+@media (max-width: 760px) { :is(.service-card, .process-item, .case-card, .ci-card, .platform-panel, .quote-card).tilt3d { --rx0: 5deg; } }
