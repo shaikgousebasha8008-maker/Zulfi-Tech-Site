@@ -1,10 +1,5 @@
-import { lazy, Suspense, useEffect, useState } from "react";
-
-// three.js is large: load the 3D logo after the page; the flat swirl shows meanwhile.
-const Swirl3D = lazy(() => import("./Swirl3D.jsx"));
-const FlatSwirl = () => (
-  <div className="swirl3d"><svg className="swirl3d-flat" aria-hidden="true"><use href="#zm" /></svg></div>
-);
+import { useEffect, useState } from "react";
+import SolarSwirl from "./SolarSwirl.jsx";
 
 // Hero visual: a live-looking "AI agent" console that works through an automation,
 // with floating cards for the AI model and the infrastructure it runs on. Sample data.
@@ -105,7 +100,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-3d">
-          <Suspense fallback={<FlatSwirl />}><Swirl3D /></Suspense>
+          <SolarSwirl />
           <HeroVisual />
         </div>
       </div>

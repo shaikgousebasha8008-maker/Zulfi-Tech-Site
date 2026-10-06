@@ -1568,3 +1568,88 @@ html[data-theme="light"] header.site-header { background: rgba(252,250,255,0.97)
 /* Light theme: deeper gold-to-violet so the accent words keep their contrast on lavender white */
 html[data-theme="light"] .hero h1 .accent { background: linear-gradient(100deg, #B9761C, #D99A24 35%, #7C3AED 75%, #2563EB); -webkit-background-clip: text; background-clip: text; color: transparent; }
 html[data-theme="light"] .hero-stat .num { background: linear-gradient(90deg, #B9761C, #7C3AED); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* =====================================================================
+   v6 · Halo solar system, oval header, dark-violet light mode (Oct 2026)
+   ===================================================================== */
+/* Hero logo: the swirl is the sun; services orbit it on tilted rings (pure CSS) */
+.solar { position: absolute; top: -40px; right: -60px; width: 600px; height: 440px; perspective: 1100px; transform-style: preserve-3d; pointer-events: none; z-index: 0; }
+.solar-glow { position: absolute; left: 50%; top: 50%; width: 320px; height: 320px; margin: -160px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(168,85,247,.5), rgba(96,165,250,.16) 60%, transparent); filter: blur(24px); animation: solar-breathe 6s ease-in-out infinite; }
+.solar-plane { position: absolute; left: 50%; top: 50%; width: 0; height: 0; transform-style: preserve-3d; transform: rotateZ(-14deg) rotateX(68deg); }
+.solar-ring { position: absolute; width: calc(var(--r) * 2); height: calc(var(--r) * 2); left: calc(var(--r) * -1); top: calc(var(--r) * -1); border-radius: 50%;
+  border: 1.5px solid rgba(196,181,253,.34); box-shadow: 0 0 26px rgba(168,85,247,.16), inset 0 0 26px rgba(168,85,247,.12); }
+.solar-orbit { position: absolute; width: calc(var(--r) * 2); height: calc(var(--r) * 2); left: calc(var(--r) * -1); top: calc(var(--r) * -1);
+  transform-style: preserve-3d; animation: solar-spin var(--t) linear infinite; animation-delay: var(--d); }
+.solar-planet { position: absolute; left: 50%; top: 0; width: var(--s); height: var(--s); transform-style: preserve-3d;
+  animation: solar-face var(--t) linear infinite; animation-delay: var(--d); }
+.solar-planet i { position: absolute; inset: 0; border-radius: 50%; }
+.solar-planet.gold i { background: radial-gradient(circle at 35% 30%, #FFF4C7, #F2B233 55%, #9A4A0B); box-shadow: 0 0 16px rgba(242,178,51,.8); }
+.solar-planet.violet i { background: radial-gradient(circle at 35% 30%, #F3E8FF, #A855F7 55%, #4C1D95); box-shadow: 0 0 16px rgba(168,85,247,.8); }
+.solar-planet.blue i { background: radial-gradient(circle at 35% 30%, #DBEAFE, #60A5FA 55%, #1E3A8A); box-shadow: 0 0 16px rgba(96,165,250,.8); }
+.solar-planet span { position: absolute; left: calc(100% + 7px); top: 50%; transform: translateY(-50%); white-space: nowrap; font: 700 11.5px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: .02em; padding: 3px 10px; border-radius: 999px; background: rgba(20,14,48,.78); color: #EDE7FF; border: 1px solid rgba(196,181,253,.28); }
+.solar-sun { position: absolute; left: 50%; top: 50%; width: 190px; height: 190px; margin: -95px; overflow: visible;
+  filter: drop-shadow(0 12px 28px rgba(91,33,182,.55)); animation: solar-turn 40s linear infinite; }
+@keyframes solar-spin { to { transform: rotateZ(360deg); } }
+@keyframes solar-face {
+  from { transform: translate(-50%, -50%) rotateZ(0deg) rotateX(-68deg) rotateZ(14deg); }
+  to { transform: translate(-50%, -50%) rotateZ(-360deg) rotateX(-68deg) rotateZ(14deg); }
+}
+@keyframes solar-turn { to { transform: rotate(360deg); } }
+@keyframes solar-breathe { 50% { transform: scale(1.08); opacity: .8; } }
+@media (prefers-reduced-motion: reduce) { .solar, .solar * { animation-play-state: paused !important; } }
+html[data-theme="light"] .solar-ring { border-color: rgba(91,33,182,.3); box-shadow: 0 0 22px rgba(124,58,237,.12); }
+html[data-theme="light"] .solar-planet span { background: rgba(255,255,255,.9); color: #3B1D8F; border-color: rgba(91,33,182,.22); }
+.hero-3d .hv { margin-top: 250px; }
+@media (max-width: 1000px) {
+  .solar { position: relative; top: 0; right: auto; left: 50%; margin-left: -300px; transform: scale(.58); transform-origin: 50% 0; margin-bottom: -150px; }
+  .hero-3d .hv { margin-top: 0; }
+}
+
+/* Oval floating header: the bar is a pill that floats over the page */
+header.site-header { position: sticky; top: 0; z-index: 60; padding: 12px 16px 0; margin-bottom: -88px; background: transparent !important; border: 0;
+  backdrop-filter: none !important; -webkit-backdrop-filter: none !important; pointer-events: none; }
+header.site-header::after { display: none; }
+header.site-header nav { pointer-events: auto; max-width: 1240px; margin: 0 auto; padding: 10px 10px 10px 22px; border-radius: 999px;
+  background: rgba(20,14,48,.8); border: 1px solid rgba(196,181,253,.22); backdrop-filter: blur(16px) saturate(160%); -webkit-backdrop-filter: blur(16px) saturate(160%);
+  box-shadow: 0 18px 44px -22px rgba(20,8,60,.75); }
+.nav-cta, .nav-login, .theme-toggle { border-radius: 999px !important; }
+.nav-mobile { pointer-events: auto; max-width: 1240px; margin: 8px auto 0; border-radius: 22px; background: rgba(20,14,48,.97); }
+/* Light mode: the oval bar stays deep violet with light text */
+html[data-theme="light"] header.site-header { background: transparent !important; }
+html[data-theme="light"] header.site-header nav { background: rgba(30,20,66,.95); border-color: rgba(30,20,66,.6); box-shadow: 0 18px 44px -22px rgba(30,20,66,.55); }
+html[data-theme="light"] .site-header .nav-links a { color: #E2DCF7; }
+html[data-theme="light"] .site-header .nav-links a:hover { color: #fff; }
+html[data-theme="light"] .site-header .zt-name { color: #fff; }
+html[data-theme="light"] .site-header .zt-name .accent { background: linear-gradient(90deg, #FFE7A3, #F2B233 45%, #D8B4FE); -webkit-background-clip: text; background-clip: text; }
+html[data-theme="light"] .site-header .nav-login, html[data-theme="light"] .site-header .theme-toggle { color: #EDE7FF; border-color: rgba(237,231,255,.22); background: rgba(255,255,255,.06); }
+html[data-theme="light"] .site-header .nav-burger span { background: #EDE7FF; }
+html[data-theme="light"] .nav-mobile { background: rgba(30,20,66,.97); }
+html[data-theme="light"] .nav-mobile a { color: #EDE7FF; }
+
+/* Light mode: deep violet headings and a lavender hero */
+html[data-theme="light"] .hero { background: radial-gradient(900px 600px at 80% 18%, rgba(124,58,237,.22), transparent 62%), radial-gradient(700px 500px at 5% 95%, rgba(37,99,235,.10), transparent 60%), linear-gradient(180deg, #EDE7FB, #E4DBF8); }
+html[data-theme="light"] .hero h1, html[data-theme="light"] h2 { color: #1E1145; }
+html[data-theme="light"] .hero .lede { color: #4C3F78; }
+
+/* Rounder cards to match the oval header */
+.hv-console, .platform-panel, .service-card, .ad-wrap, .oa-diagram, .process-item, .hv-card { border-radius: 24px; }
+.hv-steps li, .hv-prompt { border-radius: 16px; }
+.hero-badges span, .hero-badges a { border-radius: 999px; }
+/* v6 layout: room under the floating header; the solar system sits above the console, fully in view */
+.hero { padding-top: 190px; }
+.solar { top: 10px; right: -10px; width: 560px; height: 420px; }
+.solar-sun { width: 150px; height: 150px; margin: -75px; }
+.solar-glow { width: 260px; height: 260px; margin: -130px; }
+.hero-3d .hv { margin-top: 330px; max-width: 450px; margin-left: auto; margin-right: 10px; }
+.hero-3d .hv-model { top: -26px; right: auto; left: -30px; }
+@media (max-width: 1000px) {
+  .hero { padding-top: 130px; }
+  .solar { margin-left: -280px; }
+  .hero-3d .hv { margin: 0 auto; }
+  .hero-3d .hv-model { left: 0; }
+}
+.solar { top: -90px; }
+.hero-3d .hv { margin-top: 270px; }
+@media (max-width: 1000px) { .solar { top: 0; } .hero-3d .hv { margin-top: 0; } }
