@@ -989,53 +989,6 @@ html[data-theme="light"] .hero-stats { border-top-color: #E6E1F5; }
 html[data-theme="light"] .btn-secondary { color: var(--graphite); border-color: #CFCAC0; }
 html[data-theme="light"] .eyebrow-mark span.txt { color: #B9761C; }
 
-/* showcase */
-html[data-theme="light"] .showcase { background: #F0ECFA; color: var(--graphite); }
-html[data-theme="light"] .ios-tabs { background: rgba(11,8,32,.04); border-color: rgba(11,8,32,.08); }
-html[data-theme="light"] .ios-tabs button { color: #3F3A5C; }
-html[data-theme="light"] .ios-tabs button.on { background: var(--graphite); color: var(--cream); }
-html[data-theme="light"] .showcase-text p { color: #3F3A5C; }
-html[data-theme="light"] .showcase-points li { color: #38325A; background: #fff; border-color: #E6E1F5; }
-html[data-theme="light"] .mx-window { box-shadow: 0 0 0 1px rgba(11,8,32,.08), 0 30px 70px rgba(11,8,32,.16); }
-
-/* platform cards */
-html[data-theme="light"] .zp-panel, html[data-theme="light"] .ad-panel { background: #FCFAFF; border-color: #E6E1F5; color: var(--graphite); box-shadow: 0 20px 50px rgba(11,8,32,.07); }
-html[data-theme="light"] .zp-panel > p, html[data-theme="light"] .ad-panel > p { color: #3F3A5C; }
-html[data-theme="light"] .zp-panel .pp-head h3, html[data-theme="light"] .zp-eyebrow, html[data-theme="light"] .zp-main h4 { color: #17112F !important; }
-html[data-theme="light"] .pp-head h3 .gold, html[data-theme="light"] .zp-eyebrow span, html[data-theme="light"] .zp-main h4 span { color: #B87535; }
-html[data-theme="light"] .zp-panel .pp-logo { background: #fff; border-color: #E6E1F5; }
-html[data-theme="light"] .zp-panel .pp-live, html[data-theme="light"] .ad-panel .pp-live { color: #16a34a; background: rgba(22,163,74,.10); }
-html[data-theme="light"] .zp-app { background: #F7F4FF; border-color: #E1DBF0; box-shadow: 0 18px 40px rgba(11,8,32,.10); }
-html[data-theme="light"] .zp-bar { background: #ECE9E3; border-bottom-color: #DCD6EE; }
-html[data-theme="light"] .zp-url { background: #fff; border-color: #E6E1F5; color: #3F3A5C; }
-html[data-theme="light"] .zp-side { background: #EDEAE4; border-right-color: #DCD6EE; }
-html[data-theme="light"] .zp-side span { color: #38325A; }
-html[data-theme="light"] .zp-side span.on { background: #fff; color: #0B0820; }
-html[data-theme="light"] .zp-sg, html[data-theme="light"] .zp-composer { background: #fff; border-color: #E8E3F6; }
-html[data-theme="light"] .zp-sg b { color: #17112F; }
-html[data-theme="light"] .zp-plus { background: #F2EFEA; color: #3F3A5C; }
-html[data-theme="light"] .zp-think { border-color: #E3DFD6; color: #3F3A5C; }
-html[data-theme="light"] .zp-feats span { color: #38325A; }
-html[data-theme="light"] .pp-icon { background: rgba(168,85,247,.10); }
-html[data-theme="light"] .pp-icon svg { stroke: var(--bronze); }
-html[data-theme="light"] .ad { background-image: radial-gradient(rgba(11,8,32,.08) 1px, transparent 1px); }
-html[data-theme="light"] .ad-node rect:first-child { fill: #fff; stroke: #E1DBF0; }
-html[data-theme="light"] .ad-ic { fill: #F2EEE7; }
-html[data-theme="light"] .ad-ic-t { fill: #3F3A5C; }
-html[data-theme="light"] .ad-t { fill: #17112F; }
-html[data-theme="light"] .ad-s { fill: #57526F; }
-html[data-theme="light"] .ad-links path { stroke: rgba(168,85,247,.55); }
-html[data-theme="light"] .ad-links path.dash { stroke: rgba(11,8,32,.25); }
-html[data-theme="light"] .ad-pkt { fill: #D99A24; filter: none; }
-html[data-theme="light"] .ad-group rect { fill: rgba(22,163,74,.04); stroke: rgba(22,163,74,.35); }
-html[data-theme="light"] .ad-group text { fill: #15803d; }
-html[data-theme="light"] .ad-bar { fill: #ECE8E1 !important; }
-html[data-theme="light"] .ad-node.scale rect:first-child { fill: transparent; stroke: rgba(11,8,32,.3); }
-html[data-theme="light"] .ad-node.scale .ad-t { fill: #3F3A5C; }
-html[data-theme="light"] .ad-stats div { background: #fff; border-color: #E6E1F5; }
-html[data-theme="light"] .ad-stats b { color: #17112F; }
-html[data-theme="light"] .ad-stats small { color: #57526F; }
-
 /* why, team & pricing, footer */
 html[data-theme="light"] .why, html[data-theme="light"] .team-pricing { background: #F0ECFA; color: var(--graphite); }
 html[data-theme="light"] .why .section-head h2, html[data-theme="light"] .tp-grid .section-head h2 { color: var(--graphite); }
@@ -1147,12 +1100,6 @@ html[data-theme="light"] .logo-name .gold { color: #B87535; }
   .oa-stars circle, .oa-sat, .oa-link.sat, .oa-status .wait { animation: none; }
 }
 /* light theme */
-html[data-theme="light"] .offline-ai { color: var(--graphite); background: radial-gradient(900px 500px at 75% 10%, rgba(168,85,247,.12), transparent 60%), #F0ECFA; }
-html[data-theme="light"] .offline-ai .section-head h2 { color: var(--graphite); }
-html[data-theme="light"] .offline-ai .section-head p, html[data-theme="light"] .oa-step p { color: #3F3A5C; }
-html[data-theme="light"] .oa-uses li, html[data-theme="light"] .oa-step { background: #fff; border-color: #E6E1F5; color: #38325A; }
-html[data-theme="light"] .oa-step h3 { color: var(--graphite); }
-html[data-theme="light"] .oa-diagram { background: #0B0820; border-color: #2a2f38; }
 @media (max-width: 760px) {
   .oa-diagram { overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 10px; }
   .oa-diagram svg { min-width: 720px; }
@@ -1724,3 +1671,59 @@ html[data-theme="light"] .service-card:hover { background: linear-gradient(160de
 html[data-theme="light"] .service-card h3 { color: #1E1145; }
 html[data-theme="light"] .service-card [class*="price"], html[data-theme="light"] .service-card .from b { color: #5B21B6; }
 html[data-theme="light"] .service-icon { background: linear-gradient(135deg, rgba(91,33,182,.14), rgba(37,99,235,.10)); }
+
+/* =====================================================================
+   v8 · Advanced 3D cards (both themes) + dark stage sections in light mode
+   ===================================================================== */
+/* Stage sections (showcase, platform, offline) stay night violet in light mode too, with light text */
+html[data-theme="light"] :is(.showcase, .platform, .offline-ai) { color: #EDE9FA; }
+html[data-theme="light"] :is(.showcase, .platform, .offline-ai) :is(h2, h3, h4) { color: #F4F1FF; }
+html[data-theme="light"] :is(.showcase, .platform, .offline-ai) .section-head p,
+html[data-theme="light"] :is(.showcase, .platform, .offline-ai) .showcase-text p { color: #B9B1DA; }
+html[data-theme="light"] .platform-panel :is(p, small, li) { color: #B9B1DA; }
+html[data-theme="light"] .platform-panel { background: linear-gradient(160deg, rgba(168,85,247,.10), rgba(96,165,250,.04) 60%, rgba(255,255,255,.02)), #150F31; border-color: rgba(196,181,253,.16); }
+
+/* The 3D card */
+:is(.service-card, .platform-panel, .process-item, .case-card, .ci-card, .quote-card, .why-item, .pricing-box, .faq-item) {
+  position: relative; isolation: isolate; overflow: visible;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.09), 0 34px 60px -32px rgba(6,2,28,.95), 0 14px 30px -18px rgba(124,58,237,.45); }
+/* glowing gold-violet-blue edge */
+:is(.service-card, .platform-panel, .process-item, .case-card, .ci-card, .quote-card, .why-item, .pricing-box, .faq-item)::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none; z-index: 2;
+  background: linear-gradient(135deg, rgba(242,178,51,.7), rgba(168,85,247,.45) 38%, rgba(96,165,250,.32) 68%, rgba(242,178,51,.18));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: .55; transition: opacity .3s; }
+/* glare that follows the pointer */
+:is(.service-card, .platform-panel, .process-item, .case-card, .ci-card, .quote-card, .why-item, .pricing-box, .faq-item)::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 1;
+  background: radial-gradient(420px circle at var(--gx, 50%) var(--gy, 0%), rgba(255,255,255,.11), transparent 45%);
+  opacity: 0; transition: opacity .35s; }
+.tilt3d.tilting::before { opacity: 1; }
+.tilt3d.tilting::after { opacity: 1; }
+/* lift toward the viewer and float the content above the surface */
+.tilt3d { transform: perspective(1100px) rotateX(calc(var(--rx0, 0deg) + var(--rx, 0deg))) rotateY(calc(var(--ry0, 0deg) + var(--ry, 0deg))) translateZ(var(--tz, 0px)); }
+.tilt3d.tilting { --tz: 18px; }
+.tilt3d.tilting { box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 50px 80px -34px rgba(6,2,28,.95), 0 22px 44px -20px rgba(124,58,237,.6); }
+.tilt3d :is(.service-icon, .service-top, .process-n, .pp-head, .ci-ic, .case-card .tag) { transform: translateZ(26px); transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+.tilt3d :is(h3, .faq-q) { transform: translateZ(18px); transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+.tilt3d.tilting :is(.service-icon, .process-n, .ci-ic) { transform: translateZ(44px); }
+@media (prefers-reduced-motion: reduce) { .tilt3d :is(.service-icon, .service-top, .process-n, .pp-head, .ci-ic, h3, .faq-q) { transform: none; } }
+
+/* Light-mode cards: violet-tinted glass with the same edge and depth */
+html[data-theme="light"] :is(.service-card, .process-item, .case-card, .ci-card, .quote-card, .why-item, .pricing-box, .faq-item) {
+  background: linear-gradient(160deg, #F6F1FF, #ECE4FC); border-color: rgba(91,33,182,.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 30px 50px -30px rgba(46,16,101,.45), 0 10px 24px -14px rgba(124,58,237,.3); }
+html[data-theme="light"] :is(.service-card, .process-item, .case-card, .ci-card, .quote-card, .why-item, .pricing-box, .faq-item)::after {
+  background: radial-gradient(420px circle at var(--gx, 50%) var(--gy, 0%), rgba(255,255,255,.7), transparent 45%); }
+html[data-theme="light"] :is(.process-item, .case-card, .ci-card, .quote-card, .faq-item) :is(h3, b, .faq-q) { color: #1E1145; }
+/* Card thickness: a raised slab edge under every card, so the depth reads even at rest */
+:is(.service-card, .platform-panel, .process-item, .case-card, .ci-card, .quote-card, .why-item, .pricing-box, .faq-item) {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 7px 0 -1px #2B1F5E, 0 8px 0 0 rgba(168,85,247,.35), 0 40px 60px -30px rgba(6,2,28,.95), 0 16px 34px -18px rgba(124,58,237,.5); }
+.tilt3d.tilting { box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 9px 0 -1px #33256E, 0 10px 0 0 rgba(242,178,51,.45), 0 56px 80px -32px rgba(6,2,28,.95), 0 24px 48px -20px rgba(124,58,237,.65); }
+html[data-theme="light"] :is(.service-card, .process-item, .case-card, .ci-card, .quote-card, .why-item, .pricing-box, .faq-item) {
+  box-shadow: inset 0 1px 0 #fff, 0 7px 0 -1px #D9CCF6, 0 8px 0 0 rgba(124,58,237,.28), 0 34px 50px -28px rgba(46,16,101,.45), 0 12px 26px -14px rgba(124,58,237,.3); }
+html[data-theme="light"] .tilt3d.tilting:not(.platform-panel) { box-shadow: inset 0 1px 0 #fff, 0 9px 0 -1px #CDBDF2, 0 10px 0 0 rgba(217,154,36,.45), 0 46px 64px -30px rgba(46,16,101,.5), 0 18px 34px -16px rgba(124,58,237,.4); }
+html:not([data-theme="light"]) .svc-from { color: #F4F1FF; background: linear-gradient(90deg, #FFE7A3, #F2B233); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+html:not([data-theme="light"]) .svc-from small { -webkit-text-fill-color: #B9B1DA; }
+html:not([data-theme="light"]) .svc-from-label { color: #B9B1DA; }
+html[data-theme="light"] .svc-from { color: #1E1145; }
