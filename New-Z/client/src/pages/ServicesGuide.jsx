@@ -101,8 +101,7 @@ export default function ServicesGuide() {
             </a>
           </div>
           <p className="sg-meta">
-            Prices shown in {cur === "INR" ? "Indian rupees" : "US dollars"} · Updated October 2026 ·{" "}
-            {cur === "INR" ? "18% GST is added to project prices" : "Local taxes may apply"}
+            ZulfiEra Ai prices in {cur === "INR" ? "Indian rupees" : "US dollars"} · Services are quoted per project after a free call · Updated October 2026
           </p>
         </div>
       </section>
@@ -167,10 +166,10 @@ export default function ServicesGuide() {
                   <h2>{pl.title}</h2>
                   <p>{pl.desc}</p>
                 </div>
-                <div className="sg-from">
+                {pl.from && <div className="sg-from">
                   <span>Starting at</span>
                   <b>{money(pl.from.price, cur)}{pl.from.per && <small> / {pl.from.per}</small>}</b>
-                </div>
+                </div>}
               </div>
 
               {pl.items.map((s) => (
@@ -215,13 +214,13 @@ export default function ServicesGuide() {
               <p>Every project can continue on a monthly plan, so it stays fast, secure and up to date without you thinking about it.</p>
             </div>
             <div className="sg-table" role="table" aria-label="Monthly care plans">
-              <div className="sg-tr sg-th" role="row"><span role="columnheader">Plan</span><span role="columnheader">What's included</span><span role="columnheader">Price per month</span></div>
+              <div className="sg-tr sg-th" role="row"><span role="columnheader">Plan</span><span role="columnheader">What's included</span><span role="columnheader">Pricing</span></div>
               {supportPlans.map((sp) => (
                 <div className="sg-tr" role="row" key={sp.name}>
                   <span role="cell"><b>{sp.name}</b></span>
                   <span role="cell">{sp.what}</span>
                   <span role="cell" className="num">
-                    {sp.upto ? `${money(sp.price, cur)} – ${money(sp.upto, cur)}` : `from ${money(sp.price, cur)}`}
+                    {!sp.price ? "Custom quote" : sp.upto ? `${money(sp.price, cur)} – ${money(sp.upto, cur)}` : `from ${money(sp.price, cur)}`}
                   </span>
                 </div>
               ))}

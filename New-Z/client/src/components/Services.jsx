@@ -52,11 +52,15 @@ export default function Services() {
               </ul>
               <div className="svc-foot">
                 <div>
-                  <span className="svc-from-label">Starting at</span>
-                  <span className="svc-from">
-                    {money(s.from.price, cur)}
-                    {s.from.per && <small> / {s.from.per}</small>}
-                  </span>
+                  {s.from && (
+                    <>
+                      <span className="svc-from-label">Starting at</span>
+                      <span className="svc-from">
+                        {money(s.from.price, cur)}
+                        {s.from.per && <small> / {s.from.per}</small>}
+                      </span>
+                    </>
+                  )}
                 </div>
                 <a href="#contact" className="svc-cta">Get a quote →</a>
               </div>
@@ -64,8 +68,7 @@ export default function Services() {
           ))}
         </div>
         <p className="svc-note reveal">
-          Starting prices for a typical project. You get an exact, fixed quote after a free 30-minute call.{" "}
-          {cur === "INR" ? "GST (18%) extra." : "Local taxes may apply."} Monthly support plans are available for everything we build.
+          Every project gets an exact, fixed quote after a free 30-minute call. Monthly support plans are available for everything we build.
         </p>
         <div className="svc-guide-link reveal">
           <Link to="/services" className="btn-ghost-dark">Read the full services guide →</Link>

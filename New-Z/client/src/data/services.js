@@ -74,7 +74,7 @@ export const pillars = [
     icon: "ai",
     title: "AI & SaaS Products",
     desc: "Use our ready-made AI today, or let us build AI into your business.",
-    from: { price: [349, 8], per: "month" },
+    from: null,
     items: [
       {
         id: "zulfiera-teams",
@@ -93,8 +93,7 @@ export const pillars = [
         id: "private-assistant",
         name: "Your own private AI assistant",
         sub: "Answers from your documents and policies, with agents for daily tasks.",
-        price: [40000, 900],
-        priceExtra: "setup + monthly running cost",
+        price: null,
         what: "A private ZulfiEra just for your company, with its own name, its own users and its own knowledge. It answers from your documents, policies, product lists or support history, and your data is never mixed with anyone else's.",
         example: "Hospital staff ask “What is the leave policy for night shifts?” and the assistant answers from the hospital's own HR handbook.",
         who: "Companies with many documents or repeated questions: HR, customer support, sales, IT helpdesk.",
@@ -106,7 +105,7 @@ export const pillars = [
         id: "ai-integration",
         name: "AI inside your existing software",
         sub: "We add AI to the apps you already use, like auto-replies or invoice reading.",
-        price: [30000, 700],
+        price: null,
         what: "We build AI features directly into the software you already have: your website, CRM, billing system or mobile app. There is no new app to learn; your existing screens simply get smarter.",
         example: "Your billing app gets a “Read invoice” button: upload a bill and every field fills itself in.",
         who: "Businesses that want their current software to do more, without moving to a new tool.",
@@ -118,7 +117,7 @@ export const pillars = [
         id: "saas",
         name: "New SaaS product, built for you",
         sub: "From idea to launch: design, app, payments and admin dashboard.",
-        price: [150000, 3500],
+        price: null,
         what: "We design, build and launch a complete software product for you: sign-in, database, payments and an admin dashboard. The same way we built ZulfiEra Ai.",
         who: "Founders and businesses with a product idea.",
         gets: ["Product design and a working web app", "Hosting set up and secured", "Admin dashboard and launch support"],
@@ -132,13 +131,13 @@ export const pillars = [
     icon: "cloud",
     title: "Cloud & Bare Metal",
     desc: "Secure, scalable infrastructure on Google Cloud, AWS, Cloudflare or dedicated hardware, sized to what you actually use and monitored around the clock.",
-    from: { price: [25000, 600] },
+    from: null,
     items: [
       {
         id: "cloud-migration",
         name: "Cloud setup & migration",
         sub: "Move to Google Cloud, AWS or Cloudflare and lower your monthly bill.",
-        price: [50000, 1200],
+        price: null,
         what: "We design your cloud setup, or move your existing systems to Google Cloud, AWS or Cloudflare with minimal downtime, and cut what you pay every month.",
         who: "Companies leaving old servers, or paying too much for cloud.",
         gets: ["An architecture diagram of your new setup", "The move, planned and done with minimal downtime", "A cost report showing your savings"],
@@ -160,7 +159,7 @@ export const pillars = [
         id: "kubernetes",
         name: "Kubernetes, Docker & CI/CD",
         sub: "Your code deploys automatically and safely, with one click.",
-        price: [30000, 700],
+        price: null,
         what: "We package your apps in Docker, run them on Kubernetes where it makes sense, and set up automatic build, test and deploy pipelines.",
         who: "Development teams that still deploy by hand.",
         gets: ["One-click or automatic deployments", "Instant rollback if something goes wrong", "Clear documentation for your team"],
@@ -171,7 +170,7 @@ export const pillars = [
         id: "security-monitoring",
         name: "Security, monitoring & backups",
         sub: "Locked-down servers, live Grafana dashboards, alerts and daily backups.",
-        price: [25000, 600],
+        price: null,
         what: "We lock down your servers, set up live Grafana and Prometheus dashboards with alerts, and add automatic, tested backups. Our most common first project.",
         who: "Anyone running servers.",
         gets: ["A live dashboard: CPU, memory, disk, website up/down, errors", "Alerts by email, WhatsApp or Slack", "Daily backups and a security checklist report"],
@@ -185,13 +184,13 @@ export const pillars = [
     icon: "web",
     title: "Websites, Dashboards & Automation",
     desc: "The digital layer your customers and teams use every day: fast websites, clear dashboards, and automation that removes manual work.",
-    from: { price: [15000, 350] },
+    from: null,
     items: [
       {
         id: "websites",
         name: "Business websites & web apps",
         sub: "Fast, mobile-friendly sites like zulfi-tech.com.",
-        price: [15000, 350],
+        price: null,
         what: "Fast, modern, mobile-friendly websites and web apps that make your business look as good as it is.",
         who: "Any business that needs a professional online presence.",
         gets: ["5–10 pages designed for your brand", "Contact form with branded emails", "SEO basics, hosting setup, light and dark mode"],
@@ -202,7 +201,7 @@ export const pillars = [
         id: "dashboards",
         name: "Dashboards & client portals",
         sub: "Live charts of your numbers, and logins for your customers.",
-        price: [40000, 900],
+        price: null,
         what: "Dashboards that show your key numbers live, and secure portals where your own customers can log in.",
         who: "Owners and managers who make decisions from numbers.",
         gets: ["Live charts and tables with export", "Secure sign-in and role-based access", "Admin actions with a full change history"],
@@ -213,7 +212,7 @@ export const pillars = [
         id: "automation",
         name: "Workflow automation",
         sub: "Your tools connected, so repeated manual steps run by themselves.",
-        price: [30000, 700],
+        price: null,
         what: "We connect your tools so repeated steps happen on their own, and automate server tasks with Ansible.",
         example: "New lead arrives → a reply goes out → the lead is added to your sheet → sales gets a reminder.",
         who: "Teams that do the same copy-and-paste work every day.",
@@ -225,7 +224,7 @@ export const pillars = [
         id: "crm",
         name: "CRM, reports & data pipelines",
         sub: "Track every lead and get automatic weekly reports.",
-        price: [35000, 800],
+        price: null,
         what: "We set up a CRM around your sales process and bring your data from different places into one database and one set of reports.",
         who: "Sales teams and growing businesses with data spread across many tools.",
         gets: ["A CRM set up for your sales process", "Your existing contacts imported", "Automatic weekly or monthly reports"],
@@ -238,10 +237,10 @@ export const pillars = [
 
 // ---------- Monthly plans after a project ----------
 export const supportPlans = [
-  { name: "Website care", what: "Hosting, updates, backups and small changes", price: [1500, 35], upto: [5000, 120] },
-  { name: "AI assistant running", what: "Hosting your private assistant, updates and usage", price: [5000, 120] },
-  { name: "Managed monitoring", what: "24/7 watch on dashboards and alerts, with a person on call for urgent issues", price: [5000, 120], upto: [15000, 350] },
-  { name: "AI agents", what: "Daily automated workflows running for your business", price: [3000, 70], upto: [10000, 240] },
+  { name: "Website care", what: "Hosting, updates, backups and small changes", price: null },
+  { name: "AI assistant running", what: "Hosting your private assistant, updates and usage", price: null },
+  { name: "Managed monitoring", what: "24/7 watch on dashboards and alerts, with a person on call for urgent issues", price: null },
+  { name: "AI agents", what: "Daily automated workflows running for your business", price: null },
 ];
 
 export const steps = [
@@ -265,7 +264,7 @@ export const safety = [
 ];
 
 export const faqs = [
-  { q: "Why do you show “from” prices?", a: "Every business is different. The “from” price is a typical small project. You always get a fixed, written quote before any work starts, so there are no surprises." },
+  { q: "How is pricing decided?", a: "Every business is different, so we quote each project after a free 30-minute call. You always get a fixed, written quote before any work starts, so there are no surprises." },
   { q: "Is GST included?", a: "For project work, 18% GST is added for clients in India. ZulfiEra Ai subscription prices already include GST." },
   { q: "Who owns the code you build?", a: "You do, once the project is paid in full. Our own products, such as ZulfiEra Ai, remain ours." },
   { q: "How do you keep my data safe?", a: "We use the least access needed, keep every password encrypted, log every change, and you can remove our access at any time." },
