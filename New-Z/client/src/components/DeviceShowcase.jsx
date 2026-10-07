@@ -176,7 +176,7 @@ function DashboardScreen() {
           <svg viewBox={`0 0 ${W} ${H}`} width="100%" height="100%" preserveAspectRatio="none" style={{ flex: 1, minHeight: 0 }} aria-hidden="true">
             <defs>
               <linearGradient id="mxa" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stopColor="#A855F7" stopOpacity=".45" /><stop offset="1" stopColor="#60A5FA" stopOpacity="0" />
+                <stop offset="0" stopColor="#C17F3A" stopOpacity=".35" /><stop offset="1" stopColor="#C17F3A" stopOpacity="0" />
               </linearGradient>
             </defs>
             {[0.25, 0.5, 0.75].map((g) => <line key={g} x1="0" x2={W} y1={H * g} y2={H * g} className="mx-grid" />)}

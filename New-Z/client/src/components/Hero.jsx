@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import SolarSwirl from "./SolarSwirl.jsx";
 
 // Hero visual: a live-looking "AI agent" console that works through an automation,
 // with floating cards for the AI model and the infrastructure it runs on. Sample data.
@@ -99,10 +98,7 @@ export default function Hero() {
             <div className="hero-stat"><div className="num">24/7</div><div className="lbl">monitored environments</div></div>
           </div>
         </div>
-        <div className="hero-3d">
-          <SolarSwirl />
-          <HeroVisual />
-        </div>
+        <HeroVisual />
       </div>
     </section>
   );
